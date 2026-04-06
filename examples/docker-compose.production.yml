@@ -1,0 +1,15 @@
+services:
+  mg-website:
+    build:
+      context: ..
+      dockerfile: examples/Dockerfile.production
+    container_name: mg-website
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - website-internal
+
+networks:
+  website-internal:
+    external: true
