@@ -1,0 +1,57 @@
+---
+import '@/styles/global.css';
+import Container from '@/components/Container.astro';
+import { getGlobalSiteData } from '@/lib/content';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const { settings, navigation, fallbackSite } = await getGlobalSiteData();
+
+const siteTitle = settings?.title || fallbackSite.title;
+const siteDescription = description || settings?.description || fallbackSite.description;
+const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+const navItems = navigation?.items?.length ? navigation.items : fallbackSite.nav;
+const footerText = settings?.footerText || fallbackSite.footerText;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={siteDescription} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="sticky top-0 z-30 border-b border-white/5 bg-bg/85 backdrop-blur">
+      <Container class="flex min-h-16 items-center justify-between gap-6">
+        <a href="/" class="text-sm font-semibold uppercase tracking-[0.3em] text-text">MG</a>
+        <nav aria-label="Primary navigation" class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm text-textMuted">
+            {navItems.map((item: { label: string; href: string }) => (
+              <li>
+                <a href={item.href} class="transition hover:text-text">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div class="md:hidden text-xs uppercase tracking-[0.2em] text-textMuted">Artist collective</div>
+      </Container>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-white/5 py-8">
+      <Container class="flex flex-col gap-3 text-sm text-textMuted sm:flex-row sm:items-center sm:justify-between">
+        <p>{footerText}</p>
+        <p>Built for a cleaner, stranger future.</p>
+      </Container>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+---
+export interface Item {
+  title: string;
+  body: string;
+}
+
+export interface Props {
+  items: Item[];
+}
+
+const { items = [] } = Astro.props;
+---
+
+<div class="grid gap-4 sm:grid-cols-3">
+  {items.map((item) => (
+    <div class="rounded-2xl border border-line bg-surface px-5 py-5 shadow-glow">
+      <h3 class="text-base font-semibold text-text">{item.title}</h3>
+      <p class="mt-2 text-sm leading-6 text-textMuted">{item.body}</p>
+    </div>
+  ))}
+</div>

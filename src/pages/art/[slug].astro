@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import CoverArt from '@/components/CoverArt.astro';
+import ProseContent from '@/components/ProseContent.astro';
+import ArtGallery from '@/components/ArtGallery.astro';
+import FeatureStat from '@/components/FeatureStat.astro';
+import { getArtProjectBySlug, getArtProjects } from '@/lib/art-content';
+
+export async function getStaticPaths() {
+  const projects = await getArtProjects();
+  return projects.map((project) => ({
+    params: { slug: project.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const project = slug ? await getArtProjectBySlug(slug) : null;
+
+if (!project) {
+  return Astro.redirect('/art');
+}
+
+const coverImageUrl = project.coverImage || '';
+const galleryCount = project.gallery?.length || 0;
+---
+
+<BaseLayout title={project.title} description={project.summary}>
+  <section class="border-b border-white/5 py-16 sm:py-20">
+    <Container class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <CoverArt src={coverImageUrl} alt={`${project.title} cover image`} class="lg:sticky lg:top-24" />
+
+      <div class="space-y-6">
+        <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow">
+          <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">Art project</p>
+          <h1 class="mt-4 text-4xl font-semibold tracking-tight text-text sm:text-5xl">{project.title}</h1>
+          {project.summary && <p class="mt-6 max-w-2xl text-lg leading-8 text-textMuted">{project.summary}</p>}
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <FeatureStat label="Works" value={galleryCount} />
+          <FeatureStat label="Medium" value={project.medium || 'Mixed'} />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <section class="py-12 sm:py-16">
+    <Container class="grid gap-6">
+      <ProseContent title="About this gallery" content={project.body || project.summary} />
+      <div>
+        <h2 class="mb-6 text-3xl font-semibold tracking-tight text-text">Gallery</h2>
+        <ArtGallery items={project.gallery} />
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

@@ -1,0 +1,109 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import EmbedFrame from '@/components/EmbedFrame.astro';
+import LinkPills from '@/components/LinkPills.astro';
+import MusicCard from '@/components/MusicCard.astro';
+import CoverArt from '@/components/CoverArt.astro';
+import ProseContent from '@/components/ProseContent.astro';
+import FeatureStat from '@/components/FeatureStat.astro';
+import { getArtistBySlug, getMusicReleaseBySlug, getMusicReleases } from '@/lib/music-content';
+
+export async function getStaticPaths() {
+  const releases = await getMusicReleases();
+  return releases.map((release) => ({
+    params: { slug: release.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const release = slug ? await getMusicReleaseBySlug(slug) : null;
+
+if (!release) {
+  return Astro.redirect('/music');
+}
+
+const artistSlugs = release.artistSlugs || [];
+const artistRecords = (await Promise.all(artistSlugs.map((artistSlug: string) => getArtistBySlug(artistSlug)))).filter(Boolean);
+const primaryArtist = artistRecords[0] || null;
+const title = release.title;
+const links = [
+  ...artistRecords.map((artist: any) => ({ label: artist.name, href: artist.href })),
+  ...(release.links || [])
+];
+
+const relatedCandidates = await getMusicReleases();
+const related = relatedCandidates
+  .filter((item) => item.slug !== release.slug && item.artistSlugs?.some((artistSlug: string) => artistSlugs.includes(artistSlug)))
+  .slice(0, 3);
+
+const coverImageUrl = release.coverImage || '';
+const artistCount = artistRecords.length;
+const outboundCount = release.links?.length || 0;
+---
+
+<BaseLayout title={title} description={release.summary}>
+  <section class="border-b border-white/5 py-16 sm:py-20">
+    <Container class="grid gap-10 lg:grid-cols-[1fr_1.1fr_0.9fr] lg:items-start">
+      <CoverArt src={coverImageUrl} alt={`${release.title} cover art`} class="lg:sticky lg:top-24" />
+
+      <div class="space-y-6">
+        <div>
+          <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">{release.releaseType || 'Music release'}</p>
+          <h1 class="mt-4 text-4xl font-semibold tracking-tight text-text sm:text-5xl">{release.title}</h1>
+          {primaryArtist && (
+            <p class="mt-4 text-lg text-textMuted">
+              By <a class="text-text underline decoration-accent/50 underline-offset-4" href={primaryArtist.href}>{primaryArtist.name}</a>
+            </p>
+          )}
+          {release.summary && <p class="mt-6 max-w-2xl text-lg leading-8 text-textMuted">{release.summary}</p>}
+        </div>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <FeatureStat label="Artists" value={artistCount} />
+          <FeatureStat label="Links" value={outboundCount} />
+          <FeatureStat label="Type" value={release.releaseType || 'Release'} />
+        </div>
+        <div>
+          <LinkPills links={links} />
+        </div>
+      </div>
+
+      {release.embed && (
+        <EmbedFrame
+          provider={release.embed.provider}
+          url={release.embed.url}
+          title={release.embed.title || release.title}
+          aspectRatio={release.embed.aspectRatio || '1 / 1'}
+        />
+      )}
+    </Container>
+  </section>
+
+  <section class="py-12 sm:py-16">
+    <Container class="grid gap-6 lg:grid-cols-2">
+      <ProseContent title="About this release" content={release.body} />
+      <ProseContent title="Credits" content={release.credits} />
+    </Container>
+  </section>
+
+  {related.length > 0 && (
+    <section class="pb-12 sm:pb-16">
+      <Container>
+        <div class="mb-8 max-w-3xl">
+          <h2 class="text-3xl font-semibold tracking-tight text-text">Related listening</h2>
+          <p class="mt-3 text-base leading-7 text-textMuted">Other releases currently associated with the same artist relationship set.</p>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-2 2xl:grid-cols-3">
+          {related.map((item) => (
+            <MusicCard
+              title={item.title}
+              summary={item.summary}
+              href={item.href}
+              embed={item.embed}
+            />
+          ))}
+        </div>
+      </Container>
+    </section>
+  )}
+</BaseLayout>

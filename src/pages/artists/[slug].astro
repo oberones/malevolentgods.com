@@ -1,0 +1,95 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import LinkPills from '@/components/LinkPills.astro';
+import MusicCard from '@/components/MusicCard.astro';
+import CoverArt from '@/components/CoverArt.astro';
+import HeroPanel from '@/components/HeroPanel.astro';
+import ProseContent from '@/components/ProseContent.astro';
+import FeatureStat from '@/components/FeatureStat.astro';
+import { getArtistBySlug, getArtists, getReleasesForArtist } from '@/lib/music-content';
+
+export async function getStaticPaths() {
+  const artists = await getArtists();
+  return artists.map((artist) => ({
+    params: { slug: artist.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const artist = slug ? await getArtistBySlug(slug) : null;
+
+if (!artist) {
+  return Astro.redirect('/music');
+}
+
+const releases = await getReleasesForArtist(artist.slug);
+const featuredRelease = releases[0] || null;
+const portraitUrl = artist.portrait || '';
+const releaseCount = releases.length;
+const linkCount = artist.links?.length || 0;
+const primaryPlatforms = artist.links?.map((link: { label: string }) => link.label).join(' · ') || 'No external links yet';
+---
+
+<BaseLayout title={artist.name} description={artist.shortBio}>
+  <section class="border-b border-white/5 py-16 sm:py-20">
+    <Container class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <CoverArt src={portraitUrl} alt={`${artist.name} portrait`} class="lg:sticky lg:top-24" />
+
+      <div class="space-y-6">
+        <HeroPanel eyebrow="Artist" title={artist.name} summary={artist.shortBio}>
+          <div class="mt-8">
+            <LinkPills links={artist.links} />
+          </div>
+        </HeroPanel>
+
+        <div class="grid gap-4 sm:grid-cols-3">
+          <FeatureStat label="Releases" value={releaseCount} />
+          <FeatureStat label="Links" value={linkCount} />
+          <FeatureStat label="Platforms" value={primaryPlatforms} />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <section class="py-12 sm:py-16">
+    <Container class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+      <ProseContent title="About the artist" content={artist.bio || artist.shortBio} />
+      {featuredRelease ? (
+        <MusicCard
+          title={featuredRelease.title}
+          summary={featuredRelease.summary}
+          href={featuredRelease.href}
+          embed={featuredRelease.embed}
+        />
+      ) : (
+        <div class="rounded-3xl border border-line bg-surface p-8 text-textMuted shadow-glow">
+          No featured release wired up yet.
+        </div>
+      )}
+    </Container>
+  </section>
+
+  <section class="pb-12 sm:pb-16">
+    <Container>
+      <div class="mb-8 max-w-3xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-text">Related music</h2>
+        <p class="mt-3 text-base leading-7 text-textMuted">Current first-pass releases and tracks associated with this artist.</p>
+      </div>
+      {releases.length ? (
+        <div class="grid gap-6 lg:grid-cols-2 2xl:grid-cols-3">
+          {releases.map((release) => (
+            <MusicCard
+              title={release.title}
+              summary={release.summary}
+              href={release.href}
+              embed={release.embed}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="text-textMuted">No related releases have been wired up yet.</p>
+      )}
+    </Container>
+  </section>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  summary?: string;
+  class?: string;
+}
+
+const { eyebrow, title, summary, class: className = '' } = Astro.props;
+---
+
+<section class={`rounded-3xl border border-line bg-surface p-8 shadow-glow ${className}`}>
+  {eyebrow && <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">{eyebrow}</p>}
+  <h1 class="mt-4 text-4xl font-semibold tracking-tight text-text sm:text-5xl">{title}</h1>
+  {summary && <p class="mt-6 max-w-2xl text-lg leading-8 text-textMuted">{summary}</p>}
+  <slot />
+</section>

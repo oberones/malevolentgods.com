@@ -1,0 +1,29 @@
+---
+import type { RichTextNode } from '@/lib/rich-text';
+
+export interface Props {
+  nodes?: RichTextNode[];
+  class?: string;
+}
+
+const { nodes = [], class: className = '' } = Astro.props;
+---
+
+{nodes.length > 0 && (
+  <div class={`prose-mg ${className}`}>
+    {nodes.map((node) => {
+      if (node.type === 'heading') {
+        if (node.level === 1) return <h1>{node.text}</h1>;
+        if (node.level === 2) return <h2>{node.text}</h2>;
+        if (node.level === 3) return <h3>{node.text}</h3>;
+        return <h4>{node.text}</h4>;
+      }
+
+      if (node.type === 'blockquote') {
+        return <blockquote class="my-4 border-l-2 border-accent pl-4 italic text-textMuted">{node.text}</blockquote>;
+      }
+
+      return <p>{node.text}</p>;
+    })}
+  </div>
+)}

@@ -1,0 +1,13 @@
+---
+export interface Props {
+  label: string;
+  value: string | number;
+}
+
+const { label, value } = Astro.props;
+---
+
+<div class="rounded-2xl border border-line bg-surface px-5 py-4 shadow-glow">
+  <div class="text-xs uppercase tracking-[0.25em] text-accentAlt">{label}</div>
+  <div class="mt-2 text-2xl font-semibold text-text">{value}</div>
+</div>

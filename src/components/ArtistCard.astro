@@ -1,0 +1,35 @@
+---
+import Card from '@/components/Card.astro';
+import LinkPills from '@/components/LinkPills.astro';
+
+export interface LinkItem {
+  label: string;
+  href: string;
+}
+
+export interface Props {
+  name: string;
+  shortBio?: string;
+  href?: string;
+  links?: LinkItem[];
+}
+
+const { name, shortBio, href, links = [] } = Astro.props;
+---
+
+<Card class="flex h-full flex-col justify-between gap-6">
+  <div>
+    <p class="text-xs uppercase tracking-[0.28em] text-accentAlt">Artist</p>
+    <h3 class="mt-3 text-2xl font-semibold text-text">{name}</h3>
+    {shortBio && <p class="mt-4 text-sm leading-6 text-textMuted">{shortBio}</p>}
+  </div>
+
+  <div class="space-y-4">
+    <LinkPills links={links.slice(0, 3)} />
+    {href && (
+      <a href={href} class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+        View artist →
+      </a>
+    )}
+  </div>
+</Card>

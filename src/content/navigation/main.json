@@ -1,0 +1,10 @@
+{
+  "title": "Primary navigation",
+  "items": [
+    { "label": "Home", "href": "/" },
+    { "label": "Art", "href": "/art" },
+    { "label": "Music", "href": "/music" },
+    { "label": "Writing", "href": "/writing" },
+    { "label": "Projects", "href": "/projects" }
+  ]
+}

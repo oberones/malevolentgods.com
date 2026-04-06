@@ -1,0 +1,142 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/Button.astro';
+import Card from '@/components/Card.astro';
+import Container from '@/components/Container.astro';
+import Section from '@/components/Section.astro';
+import MusicCard from '@/components/MusicCard.astro';
+import ArtistCard from '@/components/ArtistCard.astro';
+import HomeFeatureList from '@/components/HomeFeatureList.astro';
+import { getGlobalSiteData } from '@/lib/content';
+import { getHomepageContent } from '@/lib/home-content';
+
+const { settings, fallbackSite } = await getGlobalSiteData();
+const hero = settings?.homepageHero || fallbackSite.homepageHero;
+const { featuredArtists, featuredMusic, spotlightRelease } = await getHomepageContent();
+
+const homeFeatures = [
+  {
+    title: 'Structured publishing',
+    body: 'The rebuild replaces brittle one-off HTML pages with a content model that can actually grow with the collective.'
+  },
+  {
+    title: 'Mobile-first presentation',
+    body: 'The new site is being designed around responsive layouts, cleaner embeds, and less frontend cruft.'
+  },
+  {
+    title: 'Editorial flexibility',
+    body: 'Artists, releases, writing, and projects can become proper content types instead of ad hoc page hacks.'
+  }
+];
+---
+
+<BaseLayout title="Home">
+  <section class="relative overflow-hidden border-b border-white/5 py-20 sm:py-28">
+    <Container class="grid items-start gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+      <div>
+        <p class="mb-4 text-sm uppercase tracking-[0.35em] text-accentAlt">{hero.eyebrow}</p>
+        <h1 class="max-w-4xl text-5xl font-semibold tracking-tight text-text sm:text-6xl lg:text-7xl">
+          {hero.title}
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-textMuted sm:text-xl">
+          {hero.summary}
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          {hero.primaryCtaLabel && hero.primaryCtaHref && (
+            <Button href={hero.primaryCtaHref}>{hero.primaryCtaLabel}</Button>
+          )}
+          {hero.secondaryCtaLabel && hero.secondaryCtaHref && (
+            <Button href={hero.secondaryCtaHref} variant="secondary">{hero.secondaryCtaLabel}</Button>
+          )}
+        </div>
+      </div>
+
+      <Card class="min-h-[320px] bg-gradient-to-br from-surface via-surfaceAlt to-bg">
+        <div class="flex h-full flex-col justify-between gap-8">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">Current spotlight</p>
+            {spotlightRelease ? (
+              <>
+                <h2 class="mt-4 text-2xl font-semibold text-text">{spotlightRelease.title}</h2>
+                <p class="mt-4 text-base leading-7 text-textMuted">{spotlightRelease.summary}</p>
+                <div class="mt-6">
+                  <a href={spotlightRelease.href} class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+                    Open release page →
+                  </a>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2 class="mt-4 text-2xl font-semibold text-text">Platform foundation in progress</h2>
+                <p class="mt-4 text-base leading-7 text-textMuted">
+                  Astro, Tailwind, shared layout primitives, and the groundwork for Sanity-backed content are now being established.
+                </p>
+              </>
+            )}
+          </div>
+          <HomeFeatureList items={homeFeatures} />
+        </div>
+      </Card>
+    </Container>
+  </section>
+
+  <Section
+    title="Featured artists"
+    intro="The first profiles anchoring the music slice of the rebuild."
+  >
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {featuredArtists.map((artist) => (
+        <ArtistCard
+          name={artist.name}
+          shortBio={artist.shortBio}
+          href={artist.href}
+          links={artist.links}
+        />
+      ))}
+    </div>
+  </Section>
+
+  <Section
+    title="Featured music"
+    intro="The strongest early proof that the rebuild is becoming a real content-driven site instead of a nicer static mockup."
+    class="pt-0"
+  >
+    <div class="grid gap-6 lg:grid-cols-3">
+      {featuredMusic.map((item) => (
+        <MusicCard
+          title={item.title}
+          summary={item.summary}
+          href={item.href}
+          embed={item.embed}
+        />
+      ))}
+    </div>
+  </Section>
+
+  <Section
+    title="What this rebuild is actually doing"
+    intro="The point is not to preserve the old site’s mess in amber. It’s to give the collective’s work a better container."
+    class="pt-0"
+  >
+    <div class="grid gap-6 lg:grid-cols-3">
+      <Card>
+        <h3 class="text-xl font-semibold text-text">Replace brittle HTML sprawl</h3>
+        <p class="mt-3 text-sm leading-6 text-textMuted">
+          Shared layouts, reusable components, and structured content replace repeated markup and mystery breakage.
+        </p>
+      </Card>
+      <Card>
+        <h3 class="text-xl font-semibold text-text">Make publishing less annoying</h3>
+        <p class="mt-3 text-sm leading-6 text-textMuted">
+          New work should feel easy to add. The system should support the collective’s output, not fight it.
+        </p>
+      </Card>
+      <Card>
+        <h3 class="text-xl font-semibold text-text">Give the work more editorial weight</h3>
+        <p class="mt-3 text-sm leading-6 text-textMuted">
+          Releases and artist pages should feel intentional, not like a loose stack of embeds taped together.
+        </p>
+      </Card>
+    </div>
+  </Section>
+</BaseLayout>

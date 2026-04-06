@@ -1,0 +1,15 @@
+{
+  "title": "Malevolent Gods",
+  "description": "A collective of artists, musicians, writers, and makers building strange and beautiful things.",
+  "footerText": "© 2026 Malevolent Gods.",
+  "homepageHero": {
+    "eyebrow": "Malevolent Gods",
+    "title": "Art, music, writing, and software from a collective that likes it a little haunted.",
+    "summary": "This is the new foundation for the collective’s site: faster, cleaner, mobile-first, and built to grow without turning content updates into a chore.",
+    "primaryCtaLabel": "Explore music",
+    "primaryCtaHref": "/music",
+    "secondaryCtaLabel": "View art",
+    "secondaryCtaHref": "/art"
+  },
+  "socialLinks": []
+}

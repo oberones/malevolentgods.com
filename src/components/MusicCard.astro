@@ -1,0 +1,40 @@
+---
+import Card from '@/components/Card.astro';
+import EmbedFrame from '@/components/EmbedFrame.astro';
+
+export interface Embed {
+  provider?: 'Bandcamp' | 'Spotify' | 'SoundCloud' | 'YouTube' | 'Other';
+  url: string;
+  title?: string;
+  aspectRatio?: string;
+}
+
+export interface Props {
+  title: string;
+  summary?: string;
+  href?: string;
+  embed?: Embed;
+}
+
+const { title, summary, href, embed } = Astro.props;
+---
+
+<Card class="flex h-full flex-col gap-4">
+  {embed && (
+    <EmbedFrame
+      provider={embed.provider}
+      url={embed.url}
+      title={embed.title || title}
+      aspectRatio={embed.aspectRatio || '1 / 1'}
+    />
+  )}
+  <div>
+    <h3 class="text-xl font-semibold text-text">{title}</h3>
+    {summary && <p class="mt-3 text-sm leading-6 text-textMuted">{summary}</p>}
+    {href && (
+      <a href={href} class="mt-4 inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+        View details →
+      </a>
+    )}
+  </div>
+</Card>

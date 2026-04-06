@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import MusicCard from '@/components/MusicCard.astro';
+import ArtistCard from '@/components/ArtistCard.astro';
+import HeroPanel from '@/components/HeroPanel.astro';
+import { getFeaturedArtists, getFeaturedMusic } from '@/lib/music-content';
+
+const [artists, music] = await Promise.all([getFeaturedArtists(4), getFeaturedMusic(8)]);
+const spotlight = music[0] || null;
+const remainingMusic = spotlight ? music.slice(1) : music;
+---
+
+<BaseLayout title="Music">
+  <section class="py-12 sm:py-16">
+    <Section class="py-0">
+      <HeroPanel
+        eyebrow="Music"
+        title="The first real vertical slice of the rebuild"
+        summary="Structured artists, releases, and embeds have replaced the old pile of brittle music pages. This section is now the proving ground for the CMS-backed version of the site."
+      />
+    </Section>
+  </section>
+
+  {spotlight && (
+    <Section
+      title="Release spotlight"
+      intro="A featured listening entry to give the section a stronger editorial focal point."
+      class="pt-0"
+    >
+      <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+        <MusicCard
+          title={spotlight.title}
+          summary={spotlight.summary}
+          href={spotlight.href}
+          embed={spotlight.embed}
+        />
+        <div class="flex flex-col justify-between rounded-3xl border border-line bg-surface p-8 shadow-glow">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">Featured release</p>
+            <h3 class="mt-4 text-3xl font-semibold tracking-tight text-text">{spotlight.title}</h3>
+            <p class="mt-4 text-base leading-7 text-textMuted">{spotlight.summary}</p>
+          </div>
+          <div class="mt-8 space-y-4 border-t border-white/5 pt-6">
+            <p class="text-sm text-textMuted">{spotlight.releaseType || 'Release'} · {(spotlight.artistNames || []).join(', ')}</p>
+            <a href={spotlight.href} class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+              Open release page →
+            </a>
+          </div>
+        </div>
+      </div>
+    </Section>
+  )}
+
+  <Section
+    title="Featured artists"
+    intro="Profiles that anchor the current music migration pass."
+    class="pt-0"
+  >
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      {artists.map((artist) => (
+        <ArtistCard
+          name={artist.name}
+          shortBio={artist.shortBio}
+          href={artist.href}
+          links={artist.links}
+        />
+      ))}
+    </div>
+  </Section>
+
+  <Section
+    title="Featured releases"
+    intro="First-pass releases, singles, and mixes migrated from the legacy site audit."
+    class="pt-0"
+  >
+    <div class="grid gap-6 lg:grid-cols-2 2xl:grid-cols-4">
+      {remainingMusic.map((item) => (
+        <MusicCard
+          title={item.title}
+          summary={item.summary}
+          href={item.href}
+          embed={item.embed}
+        />
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

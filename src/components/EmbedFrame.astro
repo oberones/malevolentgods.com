@@ -1,0 +1,43 @@
+---
+export interface Props {
+  provider?: 'Bandcamp' | 'Spotify' | 'SoundCloud' | 'YouTube' | 'Other';
+  url: string;
+  title?: string;
+  aspectRatio?: string;
+  class?: string;
+}
+
+const {
+  provider = 'Other',
+  url,
+  title = 'Embedded media',
+  aspectRatio = '16 / 9',
+  class: className = ''
+} = Astro.props;
+
+const isBandcamp = provider === 'Bandcamp';
+const isSpotify = provider === 'Spotify';
+const isSoundCloud = provider === 'SoundCloud';
+
+const minHeightClass = isBandcamp
+  ? 'min-h-[470px]'
+  : isSpotify
+    ? 'min-h-[352px]'
+    : isSoundCloud
+      ? 'min-h-[450px]'
+      : 'min-h-[360px]';
+---
+
+<div class={`overflow-hidden rounded-3xl border border-line bg-surface shadow-glow ${className}`}>
+  <div class={`relative w-full ${minHeightClass}`} style={`aspect-ratio: ${aspectRatio};`}>
+    <iframe
+      src={url}
+      title={title}
+      class="absolute inset-0 h-full w-full"
+      loading="lazy"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      allowfullscreen
+    />
+  </div>
+</div>

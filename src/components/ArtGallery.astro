@@ -1,0 +1,23 @@
+---
+export interface GalleryItem {
+  src: string;
+  caption?: string;
+}
+
+export interface Props {
+  items?: GalleryItem[];
+}
+
+const { items = [] } = Astro.props;
+---
+
+{items.length > 0 && (
+  <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+    {items.map((item) => (
+      <figure class="overflow-hidden rounded-3xl border border-line bg-surface shadow-glow">
+        <img src={item.src} alt={item.caption || 'Artwork'} class="aspect-square h-full w-full object-cover" loading="lazy" />
+        {item.caption && <figcaption class="border-t border-white/5 px-4 py-3 text-sm text-textMuted">{item.caption}</figcaption>}
+      </figure>
+    ))}
+  </div>
+)}

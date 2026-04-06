@@ -1,0 +1,37 @@
+---
+import RichTextRenderer from '@/components/RichTextRenderer.astro';
+import type { RichTextNode } from '@/lib/rich-text';
+
+export interface Props {
+  title?: string;
+  content?: string | string[] | RichTextNode[];
+  class?: string;
+}
+
+const { title, content, class: className = '' } = Astro.props;
+
+const isRichNodes = Array.isArray(content) && content.length > 0 && typeof content[0] === 'object' && 'type' in (content[0] as object);
+const stringItems = !isRichNodes
+  ? Array.isArray(content)
+    ? content.filter(Boolean)
+    : typeof content === 'string' && content.trim().length
+      ? [content]
+      : []
+  : [];
+const richNodes = isRichNodes ? (content as RichTextNode[]) : [];
+---
+
+{(richNodes.length > 0 || stringItems.length > 0) && (
+  <section class={`rounded-3xl border border-line bg-surface p-6 shadow-glow ${className}`}>
+    {title && <h2 class="text-2xl font-semibold tracking-tight text-text">{title}</h2>}
+    {richNodes.length > 0 ? (
+      <RichTextRenderer nodes={richNodes} class={title ? 'mt-4' : ''} />
+    ) : (
+      <div class={`prose-mg ${title ? 'mt-4' : ''}`}>
+        {stringItems.map((item) => (
+          <p>{item}</p>
+        ))}
+      </div>
+    )}
+  </section>
+)}

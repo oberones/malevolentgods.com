@@ -1,0 +1,97 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import FeatureStat from '@/components/FeatureStat.astro';
+import LinkPills from '@/components/LinkPills.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('projects');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const entries = await getCollection('projects');
+const entry = entries.find((item) => item.slug === slug);
+
+if (!entry) {
+  return Astro.redirect('/projects');
+}
+
+const { Content } = await render(entry);
+const formattedDate = entry.data.publishedAt.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+const serviceCount = entry.data.links.filter((link) => link.kind === 'service' || link.kind === 'dashboard').length;
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.summary}>
+  <section class="border-b border-white/5 py-16 sm:py-20">
+    <Container class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <div class="space-y-6">
+        <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow">
+          <div class="flex flex-wrap items-center gap-3 text-sm text-textMuted">
+            <span class="uppercase tracking-[0.24em] text-accentAlt">{entry.data.projectType}</span>
+            <span>•</span>
+            <span>{entry.data.status}</span>
+            <span>•</span>
+            <time datetime={entry.data.publishedAt.toISOString()}>{formattedDate}</time>
+          </div>
+          <h1 class="mt-5 text-4xl font-semibold tracking-tight text-text sm:text-5xl">{entry.data.title}</h1>
+          <p class="mt-6 text-lg leading-8 text-textMuted">{entry.data.summary}</p>
+          <div class="mt-8">
+            <LinkPills links={entry.data.links} />
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-3">
+          <FeatureStat label="Status" value={entry.data.status} />
+          <FeatureStat label="Type" value={entry.data.projectType} />
+          <FeatureStat label="Routes" value={serviceCount} />
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow">
+        <h2 class="text-2xl font-semibold tracking-tight text-text">Stack</h2>
+        {entry.data.stack.length > 0 ? (
+          <div class="mt-6 flex flex-wrap gap-3">
+            {entry.data.stack.map((item) => (
+              <span class="rounded-full border border-line px-4 py-2 text-sm text-textMuted">{item}</span>
+            ))}
+          </div>
+        ) : (
+          <p class="mt-4 text-textMuted">No stack details added yet.</p>
+        )}
+
+        {entry.data.tags.length > 0 && (
+          <>
+            <h3 class="mt-8 text-lg font-semibold text-text">Tags</h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              {entry.data.tags.map((tag) => (
+                <span class="rounded-full border border-line px-4 py-2 text-sm text-textMuted">{tag}</span>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </Container>
+  </section>
+
+  <section class="py-12 sm:py-16">
+    <Container class="max-w-5xl">
+      <article class="prose-writing max-w-3xl">
+        <Content />
+      </article>
+
+      <div class="mt-12 border-t border-white/5 pt-8">
+        <a href="/projects" class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+          ← Back to projects
+        </a>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

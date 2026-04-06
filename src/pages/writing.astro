@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import Container from '@/components/Container.astro';
+import Button from '@/components/Button.astro';
+import { getFeaturedWriting, getWritingEntries } from '@/lib/writing-content';
+
+const entries = await getWritingEntries();
+const featured = (await getFeaturedWriting(1))[0] || null;
+const remaining = featured ? entries.filter((entry) => entry.slug !== featured.slug) : entries;
+---
+
+<BaseLayout title="Writing">
+  <section class="py-12 sm:py-16">
+    <Section class="py-0">
+      <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow sm:p-10">
+        <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">Writing</p>
+        <h1 class="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+          Notes, essays, fragments, and other text worth giving a cleaner container.
+        </h1>
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-textMuted">
+          This section is built to hold more than one mode of writing: longer essays, process notes, small fragments, and stranger editorial pieces that do not need to pretend to be a blog.
+        </p>
+      </div>
+    </Section>
+  </section>
+
+  {featured && (
+    <Section title="Featured writing" intro="A first editorial anchor for the section." class="pt-0">
+      <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow sm:p-10">
+        <div class="flex flex-wrap items-center gap-3 text-sm text-textMuted">
+          <span class="uppercase tracking-[0.24em] text-accentAlt">{featured.format}</span>
+          <span>•</span>
+          <time datetime={featured.publishedAt.toISOString()}>{featured.publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+        <h2 class="mt-5 max-w-4xl text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+          <a href={featured.href} class="transition hover:text-accentAlt">{featured.title}</a>
+        </h2>
+        <p class="mt-5 max-w-3xl text-lg leading-8 text-textMuted">{featured.summary}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          {featured.tags.map((tag) => (
+            <span class="rounded-full border border-line px-4 py-2 text-sm text-textMuted">{tag}</span>
+          ))}
+        </div>
+        <div class="mt-8">
+          <Button href={featured.href}>Read piece</Button>
+        </div>
+      </div>
+    </Section>
+  )}
+
+  <section class="pb-12 sm:pb-16">
+    <Container>
+      <div class="mb-8 max-w-3xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-text">Published writing</h2>
+        <p class="mt-3 text-base leading-7 text-textMuted">
+          A growing stack of essays, notes, and fragments with enough structure to browse but not so much that the text starts feeling trapped.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        {remaining.map((entry) => (
+          <article class="rounded-3xl border border-line bg-surface p-6 shadow-glow sm:p-8">
+            <div class="flex flex-wrap items-center gap-3 text-sm text-textMuted">
+              <span class="uppercase tracking-[0.24em] text-accentAlt">{entry.format}</span>
+              <span>•</span>
+              <time datetime={entry.publishedAt.toISOString()}>{entry.publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+            </div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-tight text-text">
+              <a href={entry.href} class="transition hover:text-accentAlt">{entry.title}</a>
+            </h3>
+            <p class="mt-4 max-w-3xl text-base leading-7 text-textMuted">{entry.summary}</p>
+            {entry.tags.length > 0 && (
+              <div class="mt-5 flex flex-wrap gap-3">
+                {entry.tags.map((tag) => (
+                  <span class="rounded-full border border-line px-4 py-2 text-sm text-textMuted">{tag}</span>
+                ))}
+              </div>
+            )}
+            <div class="mt-6">
+              <a href={entry.href} class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+                Read piece →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

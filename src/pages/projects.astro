@@ -1,0 +1,98 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import Container from '@/components/Container.astro';
+import Card from '@/components/Card.astro';
+import { getFeaturedProjects, getProjects } from '@/lib/projects-content';
+
+const projects = await getProjects();
+const featured = (await getFeaturedProjects(1))[0] || null;
+const remaining = featured ? projects.filter((project) => project.slug !== featured.slug) : projects;
+---
+
+<BaseLayout title="Projects">
+  <section class="py-12 sm:py-16">
+    <Section class="py-0">
+      <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow sm:p-10">
+        <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">Projects</p>
+        <h1 class="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+          Software, systems, interfaces, and internal tools that benefit from a cleaner surface.
+        </h1>
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-textMuted">
+          Most of these are better understood as local services, experiments, and tool surfaces than as neat public products. That means the section needs to support reverse-proxied routes, internal dashboards, and project notes without pretending everything is a startup landing page.
+        </p>
+      </div>
+    </Section>
+  </section>
+
+  {featured && (
+    <Section title="Featured project" intro="A representative entry point into the service-oriented side of the stack." class="pt-0">
+      <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow sm:p-10">
+        <div class="flex flex-wrap items-center gap-3 text-sm text-textMuted">
+          <span class="uppercase tracking-[0.24em] text-accentAlt">{featured.projectType}</span>
+          <span>•</span>
+          <span>{featured.status}</span>
+          <span>•</span>
+          <time datetime={featured.publishedAt.toISOString()}>{featured.publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+        <h2 class="mt-5 max-w-4xl text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+          <a href={featured.href} class="transition hover:text-accentAlt">{featured.title}</a>
+        </h2>
+        <p class="mt-5 max-w-3xl text-lg leading-8 text-textMuted">{featured.summary}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          {featured.stack.map((item) => (
+            <span class="rounded-full border border-line px-4 py-2 text-sm text-textMuted">{item}</span>
+          ))}
+        </div>
+        <div class="mt-8">
+          <a href={featured.href} class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+            Open project page →
+          </a>
+        </div>
+      </div>
+    </Section>
+  )}
+
+  <section class="pb-12 sm:pb-16">
+    <Container>
+      <div class="mb-8 max-w-3xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-text">Project index</h2>
+        <p class="mt-3 text-base leading-7 text-textMuted">
+          A growing catalog of software, infrastructure, and interface work that may expose services through the same domain but still needs clear editorial framing.
+        </p>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        {remaining.map((project) => (
+          <Card class="flex h-full flex-col justify-between gap-6">
+            <div>
+              <div class="flex flex-wrap items-center gap-3 text-sm text-textMuted">
+                <span class="uppercase tracking-[0.24em] text-accentAlt">{project.projectType}</span>
+                <span>•</span>
+                <span>{project.status}</span>
+              </div>
+              <h3 class="mt-4 text-2xl font-semibold tracking-tight text-text">
+                <a href={project.href} class="transition hover:text-accentAlt">{project.title}</a>
+              </h3>
+              <p class="mt-4 text-base leading-7 text-textMuted">{project.summary}</p>
+            </div>
+            <div>
+              {project.stack.length > 0 && (
+                <div class="flex flex-wrap gap-3">
+                  {project.stack.slice(0, 4).map((item) => (
+                    <span class="rounded-full border border-line px-4 py-2 text-sm text-textMuted">{item}</span>
+                  ))}
+                </div>
+              )}
+              <div class="mt-6">
+                <a href={project.href} class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+                  View project →
+                </a>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </section>
+</BaseLayout>
