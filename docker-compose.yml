@@ -1,0 +1,19 @@
+services:
+  website:
+    image: node:20-alpine
+    container_name: mg-website 
+    working_dir: /app
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 4321"
+    volumes:
+      - ./:/app
+    environment:
+      NODE_ENV: development
+    expose:
+      - "4321"
+    networks:
+      - website-internal
+    restart: unless-stopped
+
+networks:
+  website-internal:
+    external: true
