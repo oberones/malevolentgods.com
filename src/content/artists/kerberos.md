@@ -1,6 +1,6 @@
 ---
 name: Kerberos
-shortBio: Artist profile migrated from the legacy Kerberos music page.
+shortBio: Electronic music profile linking Bandcamp releases with broader streaming platforms.
 featured: true
 portrait: ''
 heroImage: ''
@@ -13,6 +13,6 @@ links:
     href: https://soundcloud.com/kerberos_makes_music
 ---
 
-Kerberos currently comes into the rebuild through a legacy page centered on Bandcamp, Spotify, and SoundCloud embeds.
+Kerberos is currently anchored by a Bandcamp album and supported by companion Spotify and SoundCloud profiles.
 
-This new version is designed to support stronger biography, artwork, and release context over time.
+The page brings those listening surfaces together so releases, platform links, and artwork can live in one place.

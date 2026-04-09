@@ -1,6 +1,6 @@
 ---
 title: Peaches and Cream
-summary: Kerberos release featured in the legacy music section.
+summary: Bandcamp album by Kerberos with supporting streaming links across the artist profile.
 releaseType: Album
 featured: true
 artistSlugs:
@@ -20,4 +20,6 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Bandcamp release migrated from the old Kerberos page and ready for richer editorial treatment.
+Peaches and Cream is the clearest release anchor on the Kerberos page and the most direct entry point into that catalog.
+
+It gives the artist profile a strong center of gravity alongside the broader Spotify and SoundCloud presence.

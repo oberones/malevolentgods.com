@@ -1,6 +1,6 @@
 ---
 title: Opening the Portal
-summary: Single featured on the legacy Enoch Root music page.
+summary: Standalone Enoch Root single from the artist's SoundCloud-led catalog.
 releaseType: Single
 featured: true
 artistSlugs:
@@ -20,4 +20,6 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Legacy single surfaced from the old site’s embed collection and promoted into a first-class release page.
+Opening the Portal highlights the more direct, single-oriented side of Enoch Root's music alongside the mixes and remix material.
+
+Giving it its own release page makes the track easier to browse as a distinct listening entry within the broader catalog.

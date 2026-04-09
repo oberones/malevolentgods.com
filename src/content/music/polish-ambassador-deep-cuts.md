@@ -1,6 +1,6 @@
 ---
 title: Polish Ambassador Deep Cuts
-summary: DJ mix featured on the legacy Enoch Root page.
+summary: DJ mix from Enoch Root's SoundCloud-led catalog.
 releaseType: DJ Mix
 featured: true
 artistSlugs:
@@ -20,4 +20,6 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Migrated from the old SoundCloud-based Enoch Root page as part of the first music slice expansion.
+Polish Ambassador Deep Cuts extends the more mix-oriented side of Enoch Root's music page.
+
+Keeping it as its own release entry makes that curation easier to browse without forcing every track into the same release format.

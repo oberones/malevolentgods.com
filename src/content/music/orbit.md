@@ -1,6 +1,6 @@
 ---
 title: Orbit
-summary: Bandcamp release associated with the Malevolent Gods collective profile.
+summary: Bandcamp album anchoring the collective Malevolent Gods music identity.
 releaseType: Album
 featured: true
 artistSlugs:
@@ -18,6 +18,6 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-First-pass migrated release page for the Malevolent Gods collective identity.
+Orbit gives the collective itself a concrete release anchor instead of leaving the Malevolent Gods name as only a wrapper around other artists' work.
 
-This content is intentionally lightweight until richer editorial material is added.
+As a Bandcamp-centered album page, it creates space for shared releases, collaborations, and group-facing catalog entries under the collective identity.

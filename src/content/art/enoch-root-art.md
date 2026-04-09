@@ -1,6 +1,6 @@
 ---
 title: Enoch Root Art
-summary: A collection of generative, digital, and hand-drawn art.
+summary: A gallery of generative, digital, and hand-drawn experiments by Enoch Root.
 medium: Generative / digital / hand-drawn
 featured: true
 coverImage: /art/enoch/img/photo-3.jpg
@@ -31,6 +31,6 @@ gallery:
     caption: MidJourney
 ---
 
-This project gathers Enoch Root’s first migrated body of visual work from the legacy site.
+Enoch Root Art brings together a range of visual experiments across generative workflows, digital illustration, and hand-drawn pieces.
 
-It includes a mix of generative, digital, and hand-drawn experiments with process notes preserved where possible.
+The gallery preserves process notes where possible so the work reads not just as a finished set of images, but as a record of different tools, textures, and approaches.

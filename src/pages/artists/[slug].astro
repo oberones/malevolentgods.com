@@ -28,7 +28,7 @@ const featuredRelease = releases[0] || null;
 const portraitUrl = artist.portrait || '';
 const releaseCount = releases.length;
 const linkCount = artist.links?.length || 0;
-const primaryPlatforms = artist.links?.map((link: { label: string }) => link.label).join(' · ') || 'No external links yet';
+const primaryPlatforms = artist.links?.map((link: { label: string }) => link.label).join(' · ') || 'No external platforms listed';
 ---
 
 <BaseLayout title={artist.name} description={artist.shortBio}>
@@ -64,7 +64,7 @@ const primaryPlatforms = artist.links?.map((link: { label: string }) => link.lab
         />
       ) : (
         <div class="rounded-3xl border border-line bg-surface p-8 text-textMuted shadow-glow">
-          No featured release wired up yet.
+          No featured release is available for this artist yet.
         </div>
       )}
     </Container>
@@ -74,7 +74,7 @@ const primaryPlatforms = artist.links?.map((link: { label: string }) => link.lab
     <Container>
       <div class="mb-8 max-w-3xl">
         <h2 class="text-3xl font-semibold tracking-tight text-text">Related music</h2>
-        <p class="mt-3 text-base leading-7 text-textMuted">Current first-pass releases and tracks associated with this artist.</p>
+        <p class="mt-3 text-base leading-7 text-textMuted">Releases, singles, and mixes currently associated with this artist.</p>
       </div>
       {releases.length ? (
         <div class="grid gap-6 lg:grid-cols-2 2xl:grid-cols-3">
@@ -88,7 +88,7 @@ const primaryPlatforms = artist.links?.map((link: { label: string }) => link.lab
           ))}
         </div>
       ) : (
-        <p class="text-textMuted">No related releases have been wired up yet.</p>
+        <p class="text-textMuted">No related releases are listed for this artist yet.</p>
       )}
     </Container>
   </section>

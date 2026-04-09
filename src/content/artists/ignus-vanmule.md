@@ -1,6 +1,6 @@
 ---
 name: Ignus VanMule
-shortBio: Artist profile migrated from the legacy Ignus music page.
+shortBio: Artist profile connecting Spotify presence with standalone SoundCloud singles.
 featured: true
 portrait: ''
 heroImage: ''
@@ -11,6 +11,6 @@ links:
     href: https://soundcloud.com/steven-a-strength
 ---
 
-Ignus VanMule’s legacy presence mixes artist-profile embeds with standalone singles.
+Ignus VanMule's music presence spans a broader Spotify artist identity and a tighter set of named SoundCloud releases.
 
-The rebuild aims to make the artist identity, releases, and related listening feel more intentional and less like a stack of widgets.
+The profile works best as a bridge between the artist page itself and the standalone singles that give the catalog its current shape.

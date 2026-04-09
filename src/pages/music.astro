@@ -16,8 +16,8 @@ const remainingMusic = spotlight ? music.slice(1) : music;
     <Section class="py-0">
       <HeroPanel
         eyebrow="Music"
-        title="The first real vertical slice of the rebuild"
-        summary="Structured artists, releases, and embeds have replaced the old pile of brittle music pages. This section is now the proving ground for the CMS-backed version of the site."
+        title="Albums, singles, mixes, and artist profiles from the collective"
+        summary="This section brings together Bandcamp releases, SoundCloud tracks, Spotify-linked artist profiles, and collaborative listening in one browsable catalog."
       />
     </Section>
   </section>
@@ -25,7 +25,7 @@ const remainingMusic = spotlight ? music.slice(1) : music;
   {spotlight && (
     <Section
       title="Release spotlight"
-      intro="A featured listening entry to give the section a stronger editorial focal point."
+      intro="A featured listening entry from the current catalog."
       class="pt-0"
     >
       <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
@@ -54,7 +54,7 @@ const remainingMusic = spotlight ? music.slice(1) : music;
 
   <Section
     title="Featured artists"
-    intro="Profiles that anchor the current music migration pass."
+    intro="Artists and collective identities currently represented in the music catalog."
     class="pt-0"
   >
     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -71,7 +71,7 @@ const remainingMusic = spotlight ? music.slice(1) : music;
 
   <Section
     title="Featured releases"
-    intro="First-pass releases, singles, and mixes migrated from the legacy site audit."
+    intro="Albums, singles, and mixes gathered from the current set of artist pages."
     class="pt-0"
   >
     <div class="grid gap-6 lg:grid-cols-2 2xl:grid-cols-4">

@@ -15,7 +15,7 @@ export const site = {
     eyebrow: 'Malevolent Gods',
     title: 'Art, music, writing, and software from a collective that likes it a little haunted.',
     summary:
-      'This is the new foundation for the collective’s site: faster, cleaner, mobile-first, and built to grow without turning content updates into a chore.',
+      'A home for the collective’s music, art, writing, and experimental software, with room for releases, galleries, notes, and other strange things to live together.',
     primaryCtaLabel: 'Explore music',
     primaryCtaHref: '/music',
     secondaryCtaLabel: 'View art',

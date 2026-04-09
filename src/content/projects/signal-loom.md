@@ -27,8 +27,6 @@ links:
 heroImage: ''
 ---
 
-Signal Loom is a placeholder project for the class of systems that are less a single application than a composed environment.
+Signal Loom explores what happens when a cluster of small self-hosted services is treated like one environment instead of a list of ports and tabs.
 
-The important part is not just running containers. It is giving those services a coherent shape, predictable routes, and a useful editorial layer so they do not feel like scattered admin panels hiding behind localhost.
-
-For this site, that makes it a good reference case for projects that are really entry points into a reverse-proxied microservice ecosystem.
+The work is less about container count than about routing, coherence, and giving related tools enough shared structure that the whole system feels navigable by humans as well as operators.

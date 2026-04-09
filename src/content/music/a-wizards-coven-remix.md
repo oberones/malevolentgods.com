@@ -1,6 +1,6 @@
 ---
 title: A Wizard's Coven (Remix)
-summary: SoundCloud item featured on the Enoch Root page and landing page.
+summary: Enoch Root remix surfaced as a featured SoundCloud track.
 releaseType: Single
 featured: true
 artistSlugs:
@@ -20,4 +20,6 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-First-pass single page migrated from the legacy SoundCloud-heavy Enoch Root section.
+A Wizard's Coven (Remix) serves as one of the clearest entry points into Enoch Root's music catalog: a standalone remix presented as a direct listen rather than folded into a larger release.
+
+Its dedicated page gives the track room to stand on its own while still connecting back to the broader artist profile.

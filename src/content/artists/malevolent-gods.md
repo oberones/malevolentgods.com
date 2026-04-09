@@ -9,4 +9,4 @@ links: []
 
 Malevolent Gods is the umbrella identity tying together the collective’s music-facing releases and collaborations.
 
-This first-pass profile is intentionally simple and ready for a richer editorial treatment once more biography and artwork are available.
+Orbit gives that identity a concrete release anchor and makes room for work that belongs to the group as a whole rather than a single artist alias.

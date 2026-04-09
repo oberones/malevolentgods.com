@@ -16,16 +16,16 @@ const { featuredArtists, featuredMusic, spotlightRelease } = await getHomepageCo
 
 const homeFeatures = [
   {
-    title: 'Structured publishing',
-    body: 'The rebuild replaces brittle one-off HTML pages with a content model that can actually grow with the collective.'
+    title: 'Curated listening',
+    body: 'Artist profiles, albums, singles, and mixes can sit beside one another without getting lost in a pile of embeds.'
   },
   {
-    title: 'Mobile-first presentation',
-    body: 'The new site is being designed around responsive layouts, cleaner embeds, and less frontend cruft.'
+    title: 'Gallery space',
+    body: 'Visual work can carry cover images, full galleries, and process notes in a form that feels intentional on any screen.'
   },
   {
-    title: 'Editorial flexibility',
-    body: 'Artists, releases, writing, and projects can become proper content types instead of ad hoc page hacks.'
+    title: 'Room for side channels',
+    body: 'Writing and software projects live beside the art and music so the site reads like a real archive of the collective.'
   }
 ];
 ---
@@ -67,9 +67,9 @@ const homeFeatures = [
               </>
             ) : (
               <>
-                <h2 class="mt-4 text-2xl font-semibold text-text">Platform foundation in progress</h2>
+                <h2 class="mt-4 text-2xl font-semibold text-text">Curated work across the collective</h2>
                 <p class="mt-4 text-base leading-7 text-textMuted">
-                  Astro, Tailwind, shared layout primitives, and the groundwork for Sanity-backed content are now being established.
+                  Music, art, writing, and software all share the same home here, with space for featured releases and quieter archive material alike.
                 </p>
               </>
             )}
@@ -82,7 +82,7 @@ const homeFeatures = [
 
   <Section
     title="Featured artists"
-    intro="The first profiles anchoring the music slice of the rebuild."
+    intro="Profiles for the artists and aliases currently represented in the music catalog."
   >
     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {featuredArtists.map((artist) => (
@@ -98,7 +98,7 @@ const homeFeatures = [
 
   <Section
     title="Featured music"
-    intro="The strongest early proof that the rebuild is becoming a real content-driven site instead of a nicer static mockup."
+    intro="A cross-section of albums, singles, and mixes currently surfaced on the site."
     class="pt-0"
   >
     <div class="grid gap-6 lg:grid-cols-3">
@@ -114,27 +114,27 @@ const homeFeatures = [
   </Section>
 
   <Section
-    title="What this rebuild is actually doing"
-    intro="The point is not to preserve the old site’s mess in amber. It’s to give the collective’s work a better container."
+    title="What Lives Here"
+    intro="The site is meant to hold the work itself, not just point away from it."
     class="pt-0"
   >
     <div class="grid gap-6 lg:grid-cols-3">
       <Card>
-        <h3 class="text-xl font-semibold text-text">Replace brittle HTML sprawl</h3>
+        <h3 class="text-xl font-semibold text-text">Connect artists to releases</h3>
         <p class="mt-3 text-sm leading-6 text-textMuted">
-          Shared layouts, reusable components, and structured content replace repeated markup and mystery breakage.
+          Artist pages can gather related albums, singles, mixes, and platform links in one readable place.
         </p>
       </Card>
       <Card>
-        <h3 class="text-xl font-semibold text-text">Make publishing less annoying</h3>
+        <h3 class="text-xl font-semibold text-text">Give visual work its own space</h3>
         <p class="mt-3 text-sm leading-6 text-textMuted">
-          New work should feel easy to add. The system should support the collective’s output, not fight it.
+          Galleries can hold cover images, process notes, and bodies of work without collapsing into a flat image dump.
         </p>
       </Card>
       <Card>
-        <h3 class="text-xl font-semibold text-text">Give the work more editorial weight</h3>
+        <h3 class="text-xl font-semibold text-text">Make room for notes and tools</h3>
         <p class="mt-3 text-sm leading-6 text-textMuted">
-          Releases and artist pages should feel intentional, not like a loose stack of embeds taped together.
+          Writing and project pages let the surrounding systems, ideas, and experiments sit next to the finished work.
         </p>
       </Card>
     </div>

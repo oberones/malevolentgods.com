@@ -16,17 +16,17 @@ const remaining = featured ? entries.filter((entry) => entry.slug !== featured.s
       <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow sm:p-10">
         <p class="text-sm uppercase tracking-[0.3em] text-accentAlt">Writing</p>
         <h1 class="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-text sm:text-5xl">
-          Notes, essays, fragments, and other text worth giving a cleaner container.
+          Notes, essays, fragments, and other text from the collective.
         </h1>
         <p class="mt-6 max-w-3xl text-lg leading-8 text-textMuted">
-          This section is built to hold more than one mode of writing: longer essays, process notes, small fragments, and stranger editorial pieces that do not need to pretend to be a blog.
+          The writing catalog spans longer essays, process notes, short fragments, and stranger editorial pieces without forcing them all into a conventional blog shape.
         </p>
       </div>
     </Section>
   </section>
 
   {featured && (
-    <Section title="Featured writing" intro="A first editorial anchor for the section." class="pt-0">
+    <Section title="Featured writing" intro="A featured piece from the current catalog." class="pt-0">
       <div class="rounded-3xl border border-line bg-surface p-8 shadow-glow sm:p-10">
         <div class="flex flex-wrap items-center gap-3 text-sm text-textMuted">
           <span class="uppercase tracking-[0.24em] text-accentAlt">{featured.format}</span>
@@ -54,7 +54,7 @@ const remaining = featured ? entries.filter((entry) => entry.slug !== featured.s
       <div class="mb-8 max-w-3xl">
         <h2 class="text-3xl font-semibold tracking-tight text-text">Published writing</h2>
         <p class="mt-3 text-base leading-7 text-textMuted">
-          A growing stack of essays, notes, and fragments with enough structure to browse but not so much that the text starts feeling trapped.
+          A growing stack of essays, notes, and fragments that stays browsable without ironing the texture out of the writing.
         </p>
       </div>
 

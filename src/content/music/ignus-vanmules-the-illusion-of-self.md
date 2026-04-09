@@ -1,6 +1,6 @@
 ---
 title: Ignus VanMule's The Illusion of Self
-summary: DJ mix surfaced on the Enoch Root legacy page and tied to Ignus VanMule in the title.
+summary: Cross-artist DJ mix connecting Enoch Root and Ignus VanMule.
 releaseType: DJ Mix
 featured: true
 artistSlugs:
@@ -23,4 +23,6 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Cross-artist mix relationship preserved from the legacy Enoch Root music page.
+The title frames this mix as a shared relationship between Enoch Root and Ignus VanMule, so the page treats it as a bridge between both artist profiles.
+
+It reads more like a named mix document than a conventional single, which gives the catalog space for collaborative or cross-attributed listening.

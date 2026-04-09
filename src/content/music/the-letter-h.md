@@ -1,6 +1,6 @@
 ---
 title: The Letter H
-summary: Dr. Doeslittle release carried over from the legacy Bandcamp embed.
+summary: Bandcamp album by Dr. Doeslittle anchored within a multi-platform artist profile.
 releaseType: Album
 featured: true
 artistSlugs:
@@ -20,6 +20,6 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Album release migrated from the legacy site’s Bandcamp embed-driven page.
+The Letter H is the clearest release anchor on Dr. Doeslittle's current page, pairing a full Bandcamp album with broader Spotify and SoundCloud presence.
 
-This page is now ready for richer editorial copy, artwork, and credit details as they become available.
+It gives the artist profile a central listening destination without reducing the project to a single platform.

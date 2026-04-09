@@ -1,6 +1,6 @@
 ---
 name: Dr. Doeslittle
-shortBio: Artist profile migrated from the legacy music section.
+shortBio: Multi-platform music profile linking Bandcamp releases with Spotify and SoundCloud.
 featured: true
 portrait: ''
 heroImage: ''
@@ -13,6 +13,6 @@ links:
     href: https://soundcloud.com/dr-doeslittle
 ---
 
-Dr. Doeslittle currently enters the rebuild through a legacy page built mostly out of Spotify, Bandcamp, and SoundCloud embeds.
+Dr. Doeslittle is currently represented through a spread of Spotify, Bandcamp, and SoundCloud links rather than a long formal biography.
 
-The goal in the rebuild is to turn that sparse old page into a proper profile with stronger editorial framing and cleaner listening paths.
+The profile centers on The Letter H as its clearest release anchor and treats the surrounding platform links as part of a broader listening footprint.

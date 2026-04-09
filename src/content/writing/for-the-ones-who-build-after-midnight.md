@@ -1,6 +1,6 @@
 ---
 title: For the Ones Who Build After Midnight
-summary: A fragment for testing a shorter, more atmospheric mode of writing in the section.
+summary: A brief fragment about solitary late-night work and the strange clarity it can bring.
 publishedAt: 2026-04-02
 featured: false
 status: published

@@ -1,6 +1,6 @@
 ---
 name: Enoch Root
-shortBio: Artist profile migrated from the legacy SoundCloud-heavy music page.
+shortBio: SoundCloud-led artist profile anchored by mixes, remixes, and standalone singles.
 featured: true
 portrait: ''
 heroImage: ''
@@ -9,6 +9,6 @@ links:
     href: https://soundcloud.com/enoch-root-music
 ---
 
-Enoch Root’s legacy page behaves more like a curated set of mixes and tracks than a conventional artist bio page.
+Enoch Root's music presence reads like a curated sequence of mixes, remixes, and one-off tracks rather than a single album cycle.
 
-In the rebuild, that gets translated into a profile with clearer relationships between artist identity and release pages.
+That makes the artist page a useful hub for following the throughline between DJ mixes, singles, and collaborative overlaps.

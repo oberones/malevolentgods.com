@@ -1,6 +1,6 @@
 ---
 title: Field Notes on Building a Stranger Container
-summary: A first essay about rebuilding the site into something cleaner, more intentional, and less hostile to future publishing.
+summary: An essay about building site structure that supports the work instead of competing with it.
 publishedAt: 2026-04-06
 featured: true
 status: published

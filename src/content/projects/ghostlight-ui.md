@@ -23,8 +23,6 @@ links:
 heroImage: ''
 ---
 
-Ghostlight UI stands in for the kind of project that is mostly about presentation and experience rather than backend novelty.
+Ghostlight UI is a front-end layer for internal tools that should feel legible, intentional, and pleasant to use once they leave localhost.
 
-If internal services are going to be exposed through the same domain and reverse proxy stack, they benefit from having an interface layer that feels intentional instead of merely reachable.
-
-That makes this a useful placeholder for future tool surfaces, dashboards, and operator-facing experiences.
+The project focuses on shared interface patterns, navigation, and visual framing so dashboards, utilities, and experiments can live under the same domain without reading like accidental admin screens.

@@ -1,6 +1,6 @@
 ---
 title: Ignus VanMule Art
-summary: Legacy gallery page for Ignus VanMule’s visual work.
+summary: A selection of digital, illustrated, and AI-assisted visual work by Ignus VanMule.
 medium: Digital / illustration / AI-assisted
 featured: true
 coverImage: /art/ignus/img/photo-2.jpg
@@ -15,6 +15,6 @@ gallery:
     caption: MidJourney
 ---
 
-This first-pass art project preserves the visual work currently surfaced through the old Ignus gallery page.
+Ignus VanMule Art gathers a compact set of bold visual pieces spanning Photoshop, Illustrator, and AI-assisted image work.
 
-The rebuild gives the work a cleaner gallery context and a stronger editorial frame.
+The gallery reads as a cross-section of approaches rather than a single series, which makes it a useful snapshot of the artist's broader visual range.
