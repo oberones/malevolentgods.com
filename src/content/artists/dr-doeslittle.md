@@ -13,6 +13,4 @@ links:
     href: https://soundcloud.com/dr-doeslittle
 ---
 
-Dr. Doeslittle is currently represented through a spread of Spotify, Bandcamp, and SoundCloud links rather than a long formal biography.
-
-The profile centers on The Letter H as its clearest release anchor and treats the surrounding platform links as part of a broader listening footprint.
+Dr. Doeslittle is not constrained by pitiful human concepts like genre. Dr. Doeslittle does what Dr. Doeslittle wants, and what Dr. Doeslittle wants is to rearrange the neurons in your brain with rhythms, textures, and soundscapes that would make your Granny question her religion.

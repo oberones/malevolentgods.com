@@ -1,6 +1,6 @@
 ---
 title: Peaches and Cream
-summary: Bandcamp album by Kerberos with supporting streaming links across the artist profile.
+summary: The first release by Kerberos
 releaseType: Album
 featured: true
 artistSlugs:
@@ -20,6 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Peaches and Cream is the clearest release anchor on the Kerberos page and the most direct entry point into that catalog.
-
-It gives the artist profile a strong center of gravity alongside the broader Spotify and SoundCloud presence.
+Peaches and Cream is the first album by Kerberos, and contains a mix of live and produced tracks covering a variety of styles and influences.

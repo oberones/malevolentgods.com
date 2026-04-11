@@ -1,6 +1,6 @@
 ---
 name: Ignus VanMule
-shortBio: Artist profile connecting Spotify presence with standalone SoundCloud singles.
+shortBio: A hyperdimensional being who communicates via sound and rhythm
 featured: true
 portrait: ''
 heroImage: ''
@@ -11,6 +11,4 @@ links:
     href: https://soundcloud.com/steven-a-strength
 ---
 
-Ignus VanMule's music presence spans a broader Spotify artist identity and a tighter set of named SoundCloud releases.
-
-The profile works best as a bridge between the artist page itself and the standalone singles that give the catalog its current shape.
+Ignus make music that spans genre, time, space, and traditional definitions of reality

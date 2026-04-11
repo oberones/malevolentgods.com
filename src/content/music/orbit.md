@@ -1,6 +1,6 @@
 ---
 title: Orbit
-summary: Bandcamp album anchoring the collective Malevolent Gods music identity.
+summary: First release by Malevelong Gods
 releaseType: Album
 featured: true
 artistSlugs:
@@ -18,6 +18,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Orbit gives the collective itself a concrete release anchor instead of leaving the Malevolent Gods name as only a wrapper around other artists' work.
-
-As a Bandcamp-centered album page, it creates space for shared releases, collaborations, and group-facing catalog entries under the collective identity.
+Orbit is the first, and to-date only, album of Malevolent Gods. It was a fully collaborative album produced during isolation in the Covid Pandemic via Mixed in Key's Satellite plugin. It is a showcase of multiple styles, influences, techniques, and instruments.

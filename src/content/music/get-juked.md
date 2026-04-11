@@ -21,5 +21,3 @@ embed:
 ---
 
 Get Juked is one of the direct-release singles currently associated with Ignus VanMule.
-
-The page treats it as a quick, self-contained listening entry rather than implying a larger album or EP structure that is not documented here.

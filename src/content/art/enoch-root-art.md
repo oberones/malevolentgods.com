@@ -32,5 +32,3 @@ gallery:
 ---
 
 Enoch Root Art brings together a range of visual experiments across generative workflows, digital illustration, and hand-drawn pieces.
-
-The gallery preserves process notes where possible so the work reads not just as a finished set of images, but as a record of different tools, textures, and approaches.

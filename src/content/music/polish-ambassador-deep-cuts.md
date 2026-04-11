@@ -1,6 +1,6 @@
 ---
 title: Polish Ambassador Deep Cuts
-summary: DJ mix from Enoch Root's SoundCloud-led catalog.
+summary: A DJ mix firmly centered around The Polish Ambassador
 releaseType: DJ Mix
 featured: true
 artistSlugs:
@@ -20,6 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Polish Ambassador Deep Cuts extends the more mix-oriented side of Enoch Root's music page.
-
-Keeping it as its own release entry makes that curation easier to browse without forcing every track into the same release format.
+This is Enoch Root's first DJ set and was recorded live using a Korg Kaoss Replay sampler. 

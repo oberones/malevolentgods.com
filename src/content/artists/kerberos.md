@@ -1,6 +1,6 @@
 ---
 name: Kerberos
-shortBio: Electronic music profile linking Bandcamp releases with broader streaming platforms.
+shortBio: Assaulting ear drums with strange sounds and frequencies since 2012
 featured: true
 portrait: ''
 heroImage: ''
@@ -13,6 +13,4 @@ links:
     href: https://soundcloud.com/kerberos_makes_music
 ---
 
-Kerberos is currently anchored by a Bandcamp album and supported by companion Spotify and SoundCloud profiles.
-
-The page brings those listening surfaces together so releases, platform links, and artwork can live in one place.
+Kerberos was assembled from space parts and animated with some broken fragements of a digital conciousness that predates human civilization. Due to some flaw in the circuitry, his only source of pleasure is making music that only a tiny fraction of the planet could ever possibly enjoy. 

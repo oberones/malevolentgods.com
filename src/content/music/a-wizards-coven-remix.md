@@ -1,6 +1,6 @@
 ---
 title: A Wizard's Coven (Remix)
-summary: Enoch Root remix surfaced as a featured SoundCloud track.
+summary: Enoch Root's winning remix for The Polish Ambassador's first remix contest
 releaseType: Single
 featured: true
 artistSlugs:
@@ -20,6 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-A Wizard's Coven (Remix) serves as one of the clearest entry points into Enoch Root's music catalog: a standalone remix presented as a direct listen rather than folded into a larger release.
-
-Its dedicated page gives the track room to stand on its own while still connecting back to the broader artist profile.
+Enoch was a member of The Polish Amabassador's short-lived Beat Garden community, and won the the first remix contest with this track.

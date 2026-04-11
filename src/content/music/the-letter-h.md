@@ -1,6 +1,6 @@
 ---
 title: The Letter H
-summary: Bandcamp album by Dr. Doeslittle anchored within a multi-platform artist profile.
+summary: First single by Dr. Doeslitte
 releaseType: Album
 featured: true
 artistSlugs:
@@ -20,6 +20,5 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-The Letter H is the clearest release anchor on Dr. Doeslittle's current page, pairing a full Bandcamp album with broader Spotify and SoundCloud presence.
+The Letter H is Dr. Doeslittle's first single and will take you on a deep dive through sound sculpting and percussive rhythms
 
-It gives the artist profile a central listening destination without reducing the project to a single platform.

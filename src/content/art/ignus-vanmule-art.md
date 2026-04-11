@@ -16,5 +16,3 @@ gallery:
 ---
 
 Ignus VanMule Art gathers a compact set of bold visual pieces spanning Photoshop, Illustrator, and AI-assisted image work.
-
-The gallery reads as a cross-section of approaches rather than a single series, which makes it a useful snapshot of the artist's broader visual range.

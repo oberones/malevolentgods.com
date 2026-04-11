@@ -23,6 +23,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-The title frames this mix as a shared relationship between Enoch Root and Ignus VanMule, so the page treats it as a bridge between both artist profiles.
-
-It reads more like a named mix document than a conventional single, which gives the catalog space for collaborative or cross-attributed listening.
+A DJ mix of Ignus VanMule's Album "The Illusion of Self"
