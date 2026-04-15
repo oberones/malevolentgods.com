@@ -144,7 +144,7 @@ This is especially important for the Projects section, where many links may poin
 - docs surfaces
 - repos
 
-The Apps section is similar, except its entries point to hosted app subpaths like `/apps/local-dope-wars-js/`.
+The Apps section is similar, except its entries point to hosted app subpaths like `/apps/local-dope-wars/`.
 
 ## Notes
 

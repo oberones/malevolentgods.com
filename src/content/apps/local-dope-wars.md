@@ -5,7 +5,7 @@ featured: true
 sortOrder: 1
 status: live
 appType: Game
-launchPath: /apps/local-dope-wars-js/
+launchPath: /apps/local-dope-wars/
 tags:
   - strategy
   - atlanta

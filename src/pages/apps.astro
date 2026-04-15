@@ -51,11 +51,7 @@ const apps = await getApps();
           </div>
 
           <div class="border-t border-white/5 pt-6">
-            <p class="text-xs uppercase tracking-[0.24em] text-accentAlt">Launch path</p>
-            <p class="mt-2 break-all font-mono text-sm text-textMuted">{app.launchPath}</p>
-            <div class="mt-4">
-              <Button href={app.launchPath}>Open app</Button>
-            </div>
+            <Button href={app.launchPath}>Open app</Button>
           </div>
         </Card>
       ))}

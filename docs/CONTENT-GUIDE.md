@@ -440,7 +440,7 @@ Ritual Indexer is conceived as a local-first retrieval layer...
 
 Each file in this folder is one hosted app entry for the `/apps` landing page.
 
-Unlike Projects, these entries do not currently have Astro detail pages. They exist to describe and launch apps that already live at mounted subpaths such as `/apps/local-dope-wars-js/`.
+Unlike Projects, these entries do not currently have Astro detail pages. They exist to describe and launch apps that already live at mounted subpaths such as `/apps/local-dope-wars/`.
 
 ## Required fields
 - `title`
@@ -469,7 +469,7 @@ featured: true
 sortOrder: 1
 status: live
 appType: Game
-launchPath: /apps/local-dope-wars-js/
+launchPath: /apps/local-dope-wars/
 tags:
   - strategy
   - atlanta

@@ -124,7 +124,7 @@ For example, if `/projects/...` is owned by Astro, do not also proxy something d
 /writing/             → site
 /projects/            → site
 /apps/                → site landing page
-/apps/local-dope-wars-js/  → hosted app
+/apps/local-dope-wars/     → hosted app
 /apps/malevolent-crawler/  → hosted app
 /apps/soundbox/            → hosted app
 /services/...         → proxied service
