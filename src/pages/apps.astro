@@ -1,0 +1,64 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import HeroPanel from '@/components/HeroPanel.astro';
+import Card from '@/components/Card.astro';
+import Button from '@/components/Button.astro';
+import RichTextRenderer from '@/components/RichTextRenderer.astro';
+import { getApps } from '@/lib/apps-content';
+
+const apps = await getApps();
+---
+
+<BaseLayout title="Apps">
+  <section class="py-12 sm:py-16">
+    <Section class="py-0">
+      <HeroPanel
+        eyebrow="Apps"
+        title="Hosted apps, playable experiments, and browser-based tools"
+        summary="This section points to the apps living under the site's /apps/... paths, from games and crawlers to browser-native reinterpretations of earlier Malevolent Gods work."
+      />
+    </Section>
+  </section>
+
+  <Section
+    title="Hosted apps"
+    intro="Interactive projects currently mounted under the main frontend. Each link below opens the live app path directly."
+    class="pt-0"
+  >
+    <div class="grid gap-6 lg:grid-cols-2">
+      {apps.map((app) => (
+        <Card class={`flex h-full flex-col justify-between gap-6 ${app.featured ? 'lg:col-span-2' : ''}`}>
+          <div>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-textMuted">
+              <span class="uppercase tracking-[0.24em] text-accentAlt">{app.appType}</span>
+              <span>•</span>
+              <span class="capitalize">{app.status}</span>
+            </div>
+
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-text">{app.title}</h2>
+            <p class="mt-4 max-w-3xl text-base leading-7 text-textMuted">{app.summary}</p>
+
+            {app.body.length > 0 && <RichTextRenderer nodes={app.body} class="mt-6" />}
+
+            {app.tags.length > 0 && (
+              <div class="mt-6 flex flex-wrap gap-3">
+                {app.tags.map((tag) => (
+                  <span class="rounded-full border border-line px-4 py-2 text-sm text-textMuted">{tag}</span>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div class="border-t border-white/5 pt-6">
+            <p class="text-xs uppercase tracking-[0.24em] text-accentAlt">Launch path</p>
+            <p class="mt-2 break-all font-mono text-sm text-textMuted">{app.launchPath}</p>
+            <div class="mt-4">
+              <Button href={app.launchPath}>Open app</Button>
+            </div>
+          </div>
+        </Card>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

@@ -123,10 +123,16 @@ For example, if `/projects/...` is owned by Astro, do not also proxy something d
 /music/               → site
 /writing/             → site
 /projects/            → site
+/apps/                → site landing page
+/apps/local-dope-wars-js/  → hosted app
+/apps/malevolent-crawler/  → hosted app
+/apps/soundbox/            → hosted app
 /services/...         → proxied service
 /dashboards/...       → proxied dashboard
 /docs/...             → docs service or static docs
 ```
+
+If you use `/apps` this way, keep the landing page and each mounted app subpath explicitly mapped. Do not rely on a catch-all that makes it unclear whether Astro or the hosted app owns a given URL.
 
 ---
 
@@ -253,6 +259,7 @@ When deploying changes, verify at least:
 - `/music`
 - `/writing`
 - `/projects`
+- `/apps`
 
 ## Content-detail routes
 - one art detail page

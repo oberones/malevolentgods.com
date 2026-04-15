@@ -9,7 +9,8 @@ export const site = {
     { label: 'Art', href: '/art' },
     { label: 'Music', href: '/music' },
     { label: 'Writing', href: '/writing' },
-    { label: 'Projects', href: '/projects' }
+    { label: 'Projects', href: '/projects' },
+    { label: 'Apps', href: '/apps' }
   ],
   homepageHero: {
     eyebrow: 'Malevolent Gods',

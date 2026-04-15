@@ -114,6 +114,20 @@ const writing = defineCollection({
   })
 });
 
+const apps = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    featured: z.boolean().default(false),
+    sortOrder: z.number().default(100),
+    status: z.enum(['live', 'beta', 'planned']).default('live'),
+    appType: z.string(),
+    launchPath: z.string(),
+    tags: z.array(z.string()).default([])
+  })
+});
+
 const projects = defineCollection({
   type: 'content',
   schema: z.object({
@@ -146,5 +160,6 @@ export const collections = {
   artists,
   music,
   writing,
+  apps,
   projects
 };

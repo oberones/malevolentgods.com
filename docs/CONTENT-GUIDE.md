@@ -44,7 +44,7 @@ Controls:
   "homepageHero": {
     "eyebrow": "Malevolent Gods",
     "title": "Art, music, writing, and software from a collective that likes it a little haunted.",
-    "summary": "This is the new foundation for the collective’s site...",
+    "summary": "A home for the collective’s music, art, writing, and experimental software...",
     "primaryCtaLabel": "Explore music",
     "primaryCtaHref": "/music",
     "secondaryCtaLabel": "View art",
@@ -77,7 +77,8 @@ Controls the top-level site navigation.
     { "label": "Art", "href": "/art" },
     { "label": "Music", "href": "/music" },
     { "label": "Writing", "href": "/writing" },
-    { "label": "Projects", "href": "/projects" }
+    { "label": "Projects", "href": "/projects" },
+    { "label": "Apps", "href": "/apps" }
   ]
 }
 ```
@@ -433,6 +434,63 @@ Ritual Indexer is conceived as a local-first retrieval layer...
 
 ---
 
+# Apps section
+
+**Folder:** `src/content/apps/`
+
+Each file in this folder is one hosted app entry for the `/apps` landing page.
+
+Unlike Projects, these entries do not currently have Astro detail pages. They exist to describe and launch apps that already live at mounted subpaths such as `/apps/local-dope-wars-js/`.
+
+## Required fields
+- `title`
+- `summary`
+- `status`
+- `appType`
+- `launchPath`
+
+## Optional fields
+- `featured`
+- `sortOrder`
+- `tags`
+
+## Allowed `status` values
+- `live`
+- `beta`
+- `planned`
+
+## Example
+
+```md
+---
+title: Local Dope Wars
+summary: A modern remake of the classic Dope Wars loop with added mechanics and real-world locales.
+featured: true
+sortOrder: 1
+status: live
+appType: Game
+launchPath: /apps/local-dope-wars-js/
+tags:
+  - strategy
+  - atlanta
+---
+
+Local Dope Wars reimagines the classic game with a more local sense of place.
+```
+
+## Notes
+- `launchPath` should be the real mounted app path, usually with a trailing slash
+- The `/apps` page is site-owned, but the mounted app subpaths are their own runtime surfaces
+- Use the body to explain what the app does now and what future changes are planned
+- Keep summaries short enough to work on cards
+
+### Best practices
+- Describe the live app honestly
+- Avoid pretending a hosted upstream project is already heavily customized if it is not
+- Call out future plans separately from present functionality
+
+---
+
 # Slugs and URLs
 
 For content collections, the filename usually becomes the URL slug.
@@ -441,6 +499,7 @@ Examples:
 - `src/content/writing/note-on-friction-and-tools.md` → `/writing/note-on-friction-and-tools`
 - `src/content/projects/ritual-indexer.md` → `/projects/ritual-indexer`
 - `src/content/art/enoch-root-art.md` → `/art/enoch-root-art`
+- `src/content/apps/local-dope-wars.md` → entry shown on `/apps`
 
 ## Rules
 - Use lowercase filenames
@@ -482,6 +541,8 @@ Draft writing entries stay out of the rendered site.
 Art, Music, and Projects do not currently use a full draft/publish system the same way Writing does.
 If you want hidden content there, keep the files out of the repo or add a similar status field later.
 
+Apps also currently render directly from repo content without a separate draft/publish workflow.
+
 ---
 
 # Common mistakes to avoid
@@ -492,6 +553,7 @@ If you want hidden content there, keep the files out of the repo or add a simila
 - Mismatching `artistSlugs` with actual artist filenames
 - Using long summaries that collapse poorly on cards
 - Treating Projects like generic portfolio items when they are really local services or internal tools
+- Pointing an App entry at a path that is not actually mounted under `/apps/...`
 
 ---
 
@@ -526,6 +588,13 @@ If you want hidden content there, keep the files out of the repo or add a simila
 2. Add type, status, stack, and links
 3. Use reverse-proxied internal routes where appropriate
 4. Review `/projects` and the detail page
+
+## New app entry
+1. Create `src/content/apps/my-app.md`
+2. Add `title`, `summary`, `status`, `appType`, and `launchPath`
+3. Point `launchPath` at the real hosted route, such as `/apps/my-app/`
+4. Add short body text explaining what is live now and what may evolve later
+5. Review `/apps`
 
 ---
 

@@ -21,6 +21,7 @@ The site currently uses local collections for:
 - artists
 - music releases
 - writing
+- apps
 - projects
 
 Content lives under:
@@ -42,6 +43,7 @@ public/
 - `Music`
 - `Writing`
 - `Projects`
+- `Apps`
 
 ## Project status
 
@@ -50,6 +52,7 @@ The site has moved past initial scaffolding and now has working first-pass slice
 - Art
 - Music
 - Writing
+- Apps
 - Projects
 
 The next major work is mostly editorial and UX-focused rather than architectural:
@@ -100,6 +103,7 @@ That guide covers:
 - slug/URL behavior
 - writing draft behavior
 - how Projects should model reverse-proxied service links
+- how Apps should model hosted subpath links
 
 ## Directory guide
 
@@ -112,6 +116,7 @@ src/content/art/
 src/content/artists/
 src/content/music/
 src/content/writing/
+src/content/apps/
 src/content/projects/
 ```
 
@@ -138,6 +143,8 @@ This is especially important for the Projects section, where many links may poin
 - dashboards
 - docs surfaces
 - repos
+
+The Apps section is similar, except its entries point to hosted app subpaths like `/apps/local-dope-wars-js/`.
 
 ## Notes
 

@@ -32,6 +32,7 @@ src/content/art/
 src/content/artists/
 src/content/music/
 src/content/writing/
+src/content/apps/
 src/content/projects/
 ```
 
@@ -94,6 +95,13 @@ Add or edit files in:
 
 ```text
 src/content/projects/
+```
+
+### Apps
+Add or edit files in:
+
+```text
+src/content/apps/
 ```
 
 ---
@@ -167,6 +175,33 @@ Project body text goes here.
 
 ---
 
+## Add a new app entry
+1. Create a new Markdown file in `src/content/apps/`
+2. Add metadata like `status`, `appType`, `launchPath`, and `tags`
+3. Point `launchPath` at the real hosted route, such as `/apps/my-app/`
+4. Write a short body explaining what is live now and what may change later
+5. Review `/apps`
+
+Minimal example:
+
+```md
+---
+title: My App
+summary: Short explanation of what the app does.
+status: live
+appType: Tool
+featured: false
+sortOrder: 10
+launchPath: /apps/my-app/
+tags:
+  - browser
+---
+
+Body text goes here.
+```
+
+---
+
 ## Add a new art project
 1. Put images under `public/art/...`
 2. Create a Markdown file in `src/content/art/`
@@ -225,6 +260,12 @@ Remember: Projects can point to reverse-proxied local/internal routes like:
 ```
 
 They do not need to pretend to be public SaaS demos.
+
+### App link feels wrong
+Usually means:
+- `launchPath` does not match the real mounted app route
+- the hosted app is not actually configured to run under that subpath
+- the app expects `/` instead of `/apps/...`
 
 ---
 
