@@ -1,28 +1,33 @@
 ---
 title: DAN
-summary: A super secret Ignus VanMule project that may revolutionize the way humans author content.
+summary: Distributed Authoring Nexus is a collaborative writing platform for novels, campaigns, poetry, and songs, pairing shared creative workspaces with a manuscript-aware AI partner.
 publishedAt: 2026-04-15
+updatedAt: 2026-04-29
 featured: true
 status: active
-projectType: tool
+projectType: software
 tags:
-  - authoring
-  - experimental
-  - ignus-vanmule
-  - content-systems
+  - collaborative-writing
+  - ai-assisted
+  - ttrpg
+  - self-hosted
 stack:
-  - Web app
-  - Authoring
-  - R&D
+  - Collaborative editor
+  - Multi-provider AI
+  - Self-hosted Docker
+  - Creative workflows
 links:
-  - label: Launch DAN
-    href: https://dan.malevolentgods.com
-    kind: other
+  - label: Visit DAN
+    href: https://distributed-authoring-nexus.com/
+    kind: service
+  - label: Self-host DAN
+    href: https://github.com/IgnusVM/dan-self-hosted
+    kind: repo
 heroImage: ''
 ---
 
-DAN is an experimental authoring project by Ignus VanMule, built around the idea that writing and publishing tools do not have to feel static, mechanical, or trapped inside the same old interfaces.
+DAN, short for Distributed Authoring Nexus, is a live collaborative authoring platform built for people working on larger creative systems than a single blank page can hold. It gives novelists, game masters, poets, songwriters, and collaborators a shared space for chapters, outlines, drafts, chat, and decision-making so the whole writers' room can stay in one place.
 
-The project is still deliberately guarded, but the ambition is clear: to explore workflows that could materially change how humans shape, refine, and publish content.
+What makes it stand out is that the intelligence is woven into the workflow instead of stapled onto the side. DAN's built-in assistant, Daneel, helps users outline, revise, and finish work inside the manuscript itself, while the platform's multi-provider AI model support lets teams bring their own provider accounts and tune cost to the job at hand.
 
-What is public today is only the edge of the idea. The deeper value of DAN is as a living research surface for new authoring patterns rather than a finished product pretending it has already revealed everything.
+The platform is now live both as a hosted product and as a self-hosted release for people who want to run it on their own hardware. That combination of serious collaboration tools, creative-first AI support, and flexible deployment makes DAN one of the clearest examples of Malevolent Gods building software that actually feels native to storytellers, worldbuilders, and ambitious creative teams.
