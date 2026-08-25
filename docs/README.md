@@ -1,4 +1,4 @@
-# new-malevolentgods.com
+# malevolentgods.com
 
 This directory contains the current Astro/Tailwind rebuild of the Malevolent Gods website.
 

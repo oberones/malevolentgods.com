@@ -1,6 +1,6 @@
-# AGENTS.md — new-malevolentgods.com
+# AGENTS.md — malevolentgods.com
 
-This file is for future AI agents working inside the `new-malevolentgods.com` project.
+This file is for future AI agents working inside the `malevolentgods.com` project.
 
 ## What this project is
 
@@ -8,15 +8,15 @@ This is the in-progress rebuild of the `malevolentgods.com` website.
 
 ### Legacy site
 The old site is a hand-authored static HTML/Bootstrap/jQuery site in:
-- `/home/node/.openclaw/workspace/malevolentgods.com`
+- `../old-malevolentgods.com`
 
 It has known bugs, missing pages, old cruft, and inconsistent structure.
 Do **not** treat the legacy site as a canonical source of truth for architecture quality.
 Use it as a **content/reference source**, not as a design or implementation standard.
 
-### New site
-The rebuild lives in:
-- `/home/node/.openclaw/workspace/new-malevolentgods.com`
+### Current site
+The rebuild lives in this repository:
+- `.`
 
 Target stack:
 - **Astro**
@@ -92,7 +92,7 @@ Read those before making major structural changes.
 ## Source-of-truth rules
 
 ### For structure and implementation
-Prefer the **new project code** and root planning docs.
+Prefer the **current project code** and root planning docs.
 
 ### For content migration
 Use the legacy site only as a reference source.
