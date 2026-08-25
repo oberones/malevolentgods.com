@@ -1,6 +1,6 @@
 ---
 title: Peaches and Cream
-summary: The first release by Kerberos
+summary: "Kerberos's first album: live playing, studio production, and several incompatible influences."
 releaseType: Album
 featured: true
 artistSlugs:
@@ -20,4 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Peaches and Cream is the first album by Kerberos, and contains a mix of live and produced tracks covering a variety of styles and influences.
+Peaches and Cream is the first album by Kerberos, mixing live and produced tracks across a variety of styles and influences. The circuitry held together long enough to finish it.

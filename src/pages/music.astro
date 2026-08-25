@@ -16,8 +16,8 @@ const remainingMusic = spotlight ? music.slice(1) : music;
     <Section class="py-0">
       <HeroPanel
         eyebrow="Music"
-        title="Albums, singles, mixes, and artist profiles from the collective"
-        summary="This section brings together Bandcamp releases, SoundCloud tracks, Spotify-linked artist profiles, and collaborative listening in one browsable catalog."
+        title="Records, mixes, and transmissions from the collective."
+        summary="Hear full releases, one-off tracks, DJ sets, and the entities responsible for them."
       />
     </Section>
   </section>
@@ -25,7 +25,7 @@ const remainingMusic = spotlight ? music.slice(1) : music;
   {spotlight && (
     <Section
       title="Release spotlight"
-      intro="A featured listening entry from the current catalog."
+      intro="Start here."
       class="pt-0"
     >
       <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
@@ -54,7 +54,7 @@ const remainingMusic = spotlight ? music.slice(1) : music;
 
   <Section
     title="Featured artists"
-    intro="Artists and collective identities currently represented in the music catalog."
+    intro="Meet the aliases behind the noise."
     class="pt-0"
   >
     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -71,7 +71,7 @@ const remainingMusic = spotlight ? music.slice(1) : music;
 
   <Section
     title="Featured releases"
-    intro="Albums, singles, and mixes gathered from the current set of artist pages."
+    intro="The rest of the signal."
     class="pt-0"
   >
     <div class="grid gap-6 lg:grid-cols-2 2xl:grid-cols-4">

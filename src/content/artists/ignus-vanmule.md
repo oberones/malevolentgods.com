@@ -1,6 +1,6 @@
 ---
 name: Ignus VanMule
-shortBio: A hyperdimensional being who communicates via sound and rhythm
+shortBio: A hyperdimensional being communicating through sound, rhythm, and minor violations of reality.
 featured: true
 portrait: ''
 heroImage: ''
@@ -11,4 +11,4 @@ links:
     href: https://soundcloud.com/steven-a-strength
 ---
 
-Ignus make music that spans genre, time, space, and traditional definitions of reality
+Ignus makes music that spans genre, time, space, and traditional definitions of reality.

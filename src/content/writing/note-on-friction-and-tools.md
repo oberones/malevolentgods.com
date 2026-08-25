@@ -3,7 +3,7 @@ title: Note on Friction and Tools
 summary: A short note on the difference between productive friction and pointless technical drag.
 publishedAt: 2026-04-04
 featured: false
-status: published
+status: draft
 format: note
 tags:
   - tooling

@@ -1,6 +1,6 @@
 ---
 title: SoundForge
-summary: A Malevolent Gods art project combining generative music with infinity portal graphics for an immersive multisensory experience.
+summary: Generative music and infinity-portal graphics operating as one immersive machine.
 publishedAt: 2026-04-13
 featured: false
 status: active
@@ -25,8 +25,8 @@ links:
 heroImage: ''
 ---
 
-SoundForge is a Malevolent Gods art project designed as an immersive encounter rather than a passive media object, bringing generative music together with infinity portal graphics as a single multisensory system.
+SoundForge combines generative music with infinity-portal graphics as a single multisensory system. It is less interested in being watched than in surrounding whoever gets close enough.
 
-The project made its public debut last year at Alchemy, where it operated as an experiential installation rather than a conventional software demo.
+The project made its public debut at Alchemy as an experiential installation rather than a conventional software demo.
 
-Its current architecture is split across two components: the SoundForge Engine, which drives the core experience, and the SoundForge Controller, which handles the control surface around it.
+Two components keep the portal open: the SoundForge Engine drives the experience, and the SoundForge Controller handles the surrounding control surface.

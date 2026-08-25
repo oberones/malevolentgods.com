@@ -1,7 +1,7 @@
 ---
 title: The Letter H
-summary: First single by Dr. Doeslitte
-releaseType: Album
+summary: "Dr. Doeslittle's first single: a deep dive through sound sculpture and percussive rhythm."
+releaseType: Single
 featured: true
 artistSlugs:
   - dr-doeslittle
@@ -20,5 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-The Letter H is Dr. Doeslittle's first single and will take you on a deep dive through sound sculpting and percussive rhythms
-
+The Letter H is Dr. Doeslittle's first single, built from sound sculpture, percussive rhythms, and a healthy disregard for the remaining twenty-five letters.

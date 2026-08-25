@@ -1,6 +1,6 @@
 ---
 title: DAN
-summary: Distributed Authoring Nexus is a collaborative writing platform for novels, campaigns, poetry, and songs, pairing shared creative workspaces with a manuscript-aware AI partner.
+summary: A shared writing room for novels, campaigns, poetry, and songs, with a manuscript-aware AI already inside.
 publishedAt: 2026-04-15
 updatedAt: 2026-04-29
 featured: true
@@ -26,8 +26,8 @@ links:
 heroImage: ''
 ---
 
-DAN, short for Distributed Authoring Nexus, is a live collaborative authoring platform built for people working on larger creative systems than a single blank page can hold. It gives novelists, game masters, poets, songwriters, and collaborators a shared space for chapters, outlines, drafts, chat, and decision-making so the whole writers' room can stay in one place.
+DAN, short for Distributed Authoring Nexus, gives novelists, game masters, poets, songwriters, and collaborators one shared room for chapters, outlines, drafts, chat, and decisions. A blank page was deemed insufficient containment.
 
-What makes it stand out is that the intelligence is woven into the workflow instead of stapled onto the side. DAN's built-in assistant, Daneel, helps users outline, revise, and finish work inside the manuscript itself, while the platform's multi-provider AI model support lets teams bring their own provider accounts and tune cost to the job at hand.
+Daneel, the built-in assistant, works inside the manuscript to help outline, revise, and finish the work. Multi-provider model support lets teams bring their own accounts and choose how much intelligence—and expense—to summon for a given job.
 
-The platform is now live both as a hosted product and as a self-hosted release for people who want to run it on their own hardware. That combination of serious collaboration tools, creative-first AI support, and flexible deployment makes DAN one of the clearest examples of Malevolent Gods building software that actually feels native to storytellers, worldbuilders, and ambitious creative teams.
+DAN is available as both a hosted service and a self-hosted release for people who prefer to keep the machinery on hardware they can reach.

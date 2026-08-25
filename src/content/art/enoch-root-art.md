@@ -1,6 +1,6 @@
 ---
 title: Enoch Root Art
-summary: A gallery of generative, digital, and hand-drawn experiments by Enoch Root.
+summary: Twelve excursions through generative systems, digital illustration, and hand-drawn work.
 medium: Generative / digital / hand-drawn
 featured: true
 coverImage: /art/enoch/img/photo-3.jpg
@@ -31,4 +31,4 @@ gallery:
     caption: MidJourney
 ---
 
-Enoch Root Art brings together a range of visual experiments across generative workflows, digital illustration, and hand-drawn pieces.
+Stable Diffusion, ControlNet, Midjourney, digital tools, and human hands were all implicated. These twelve images are what survived the process.

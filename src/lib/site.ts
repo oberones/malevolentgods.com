@@ -2,8 +2,8 @@ export const site = {
   name: 'Malevolent Gods',
   title: 'Malevolent Gods',
   description:
-    'A collective of artists, musicians, writers, and makers building strange and beautiful things.',
-  footerText: '© 2026 Malevolent Gods.',
+    'Art, music, writing, games, and other signals from an Atlanta collective operating slightly outside consensus reality.',
+  footerText: '© 2026 Malevolent Gods. All rights to your mother reserved.',
   nav: [
     { label: 'Home', href: '/' },
     { label: 'Art', href: '/art' },
@@ -14,12 +14,12 @@ export const site = {
   ],
   homepageHero: {
     eyebrow: 'Malevolent Gods',
-    title: 'Art, music, writing, and software from a collective that likes it a little haunted.',
+    title: 'Art, music, writing, and software from slightly outside consensus reality.',
     summary:
-      'A home for the collective’s music, art, writing, and experimental software, with room for releases, galleries, notes, and other strange things to live together.',
-    primaryCtaLabel: 'Explore music',
+      'Malevolent Gods makes records, images, games, tools, and whatever refuses to fit the category.',
+    primaryCtaLabel: 'Hear the music',
     primaryCtaHref: '/music',
-    secondaryCtaLabel: 'View art',
+    secondaryCtaLabel: 'See the art',
     secondaryCtaHref: '/art'
   },
   social: []

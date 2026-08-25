@@ -1,6 +1,6 @@
 ---
 title: Orbit
-summary: First release by Malevelong Gods
+summary: The first and, so far, only full-length album by Malevolent Gods.
 releaseType: Album
 featured: true
 artistSlugs:
@@ -18,4 +18,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Orbit is the first, and to-date only, album of Malevolent Gods. It was a fully collaborative album produced during isolation in the Covid Pandemic via Mixed in Key's Satellite plugin. It is a showcase of multiple styles, influences, techniques, and instruments.
+Orbit was assembled collaboratively during pandemic isolation using Mixed in Key's Satellite plugin. Multiple styles, influences, techniques, and instruments were placed in close proximity and allowed to interfere with one another.
