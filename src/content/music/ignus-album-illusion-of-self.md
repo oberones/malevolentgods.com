@@ -1,6 +1,6 @@
 ---
 title: Illusion of Self
-summary: An exploration of sound and conciousness
+summary: An exploration of sound and consciousness
 releaseType: Album
 featured: true
 artistSlugs:
