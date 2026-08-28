@@ -2,7 +2,7 @@
 #
 # This builds the site as static output and serves it with nginx.
 # It is intended to sit behind a separate edge nginx reverse proxy
-# on the shared Docker network `website-internal`.
+# on the shared Docker network `ai-backend`.
 
 FROM node:20-alpine AS build
 WORKDIR /app
