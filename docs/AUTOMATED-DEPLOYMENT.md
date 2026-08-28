@@ -115,7 +115,7 @@ Add these environment secrets:
 | --- | --- |
 | `DEPLOY_HOST` | SSH hostname or IP address of the target server |
 | `DEPLOY_PORT` | SSH port, such as `22666` |
-| `DEPLOY_USER` | Server deployment account, such as `ghDeploy` |
+| `DEPLOY_USER` | Server deployment account, such as `deploy` |
 | `DEPLOY_SSH_KEY` | Complete private deployment key, including header and footer |
 | `DEPLOY_KNOWN_HOSTS` | Verified OpenSSH `known_hosts` entry for `DEPLOY_HOST` and `DEPLOY_PORT` |
 
