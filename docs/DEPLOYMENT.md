@@ -229,6 +229,10 @@ Keep caching policy explicit per route family instead of trying to treat the who
 
 # Deployment workflow
 
+Production deployments are automated by GitHub Actions. See
+[`AUTOMATED-DEPLOYMENT.md`](./AUTOMATED-DEPLOYMENT.md) for the one-time Ubuntu and
+GitHub setup, workflow behavior, deployment verification, and rollback procedure.
+
 ## Recommended content/site deploy flow
 
 1. edit content or code in the repo

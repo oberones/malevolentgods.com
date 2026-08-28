@@ -8,8 +8,8 @@ services:
     expose:
       - "80"
     networks:
-      - website-internal
+      - ai-backend
 
 networks:
-  website-internal:
+  ai-backend:
     external: true

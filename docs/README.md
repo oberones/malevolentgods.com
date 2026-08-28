@@ -153,6 +153,12 @@ The Apps section is similar, except its entries point to hosted app subpaths lik
 - Root-relative asset paths like `/art/enoch/img/photo-3.jpg` assume the file exists under `public/`
 - If content appears missing, check both the collection entry and the referenced asset paths
 
+## Production deployment
+
+Merges to `main` can build, publish, and deploy the production container through
+GitHub Actions. See [`AUTOMATED-DEPLOYMENT.md`](./AUTOMATED-DEPLOYMENT.md) for the
+required one-time server and repository configuration.
+
 ## Recommended next maintenance steps
 
 Over time, this repo would benefit from:

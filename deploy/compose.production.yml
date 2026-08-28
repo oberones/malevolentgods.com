@@ -1,0 +1,21 @@
+name: malevolentgods
+
+services:
+  mg-website:
+    image: ghcr.io/oberones/malevolentgods.com:${IMAGE_TAG:-latest}
+    container_name: mg-website
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - ai-backend
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail --silent http://127.0.0.1/ >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 5s
+
+networks:
+  ai-backend:
+    external: true
