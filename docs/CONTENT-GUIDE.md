@@ -252,6 +252,7 @@ First-pass migrated release page for the Malevolent Gods collective identity.
   - `Bandcamp`
   - `Spotify`
   - `SoundCloud`
+  - `MixCloud`
   - `YouTube`
   - `Other`
 
