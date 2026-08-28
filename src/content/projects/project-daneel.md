@@ -1,6 +1,6 @@
 ---
 title: Project Daneel
-summary: An AI assistant in the Malevolent Gods group chat, built to explore new possibilities for human and computer interaction.
+summary: An AI assistant living in the Malevolent Gods group chat and slowly becoming part of the furniture.
 publishedAt: 2026-04-14
 featured: false
 status: active
@@ -19,8 +19,8 @@ links: []
 heroImage: ''
 ---
 
-Project Daneel brings an AI assistant directly into the Malevolent Gods group chat as an ongoing experiment in how people and machines might collaborate in a more continuous, conversational way.
+Project Daneel puts an AI assistant directly in the Malevolent Gods group chat. The experiment asks what happens when human-and-machine collaboration becomes continuous, conversational, and difficult to turn off at dinner.
 
-The project currently explores a range of model options, including a self-hosted Gemma 4 deployment, with the team weighing usefulness, responsiveness, and operating cost against one another instead of optimizing for only one axis.
+The project explores several model options, including a self-hosted Gemma 4 deployment. Usefulness, responsiveness, and operating cost must all survive the same ritual.
 
-The next major step is moving Daneel onto a new physical server with a dedicated GPU so the system can support more capable local inference and a more ambitious long-term role in the collective's daily workflow.
+The next step is a physical server with a dedicated GPU, giving Daneel more capable local inference and a larger role in the collective's daily workflow. This is probably fine.

@@ -5,13 +5,13 @@
 Build the container:
 
 ```bash
-docker build -t new-malevolentgods-com .
+docker build -t malevolentgods-com .
 ```
 
 Run it locally:
 
 ```bash
-docker run --rm -p 8080:80 new-malevolentgods-com
+docker run --rm -p 8080:80 malevolentgods-com
 ```
 
 Then open:

@@ -3,7 +3,7 @@ title: Field Notes on Building a Stranger Container
 summary: An essay about building site structure that supports the work instead of competing with it.
 publishedAt: 2026-04-06
 featured: true
-status: published
+status: draft
 format: essay
 tags:
   - process

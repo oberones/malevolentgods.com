@@ -1,6 +1,6 @@
 ---
 title: Polish Ambassador Deep Cuts
-summary: A DJ mix firmly centered around The Polish Ambassador
+summary: Enoch Root's first live DJ set, built from The Polish Ambassador deep cuts.
 releaseType: DJ Mix
 featured: true
 artistSlugs:
@@ -20,4 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-This is Enoch Root's first DJ set and was recorded live using a Korg Kaoss Replay sampler. 
+Enoch Root recorded this first DJ set live on a Korg Kaoss Replay sampler, using deep cuts from The Polish Ambassador as raw material.

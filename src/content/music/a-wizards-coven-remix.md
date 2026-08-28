@@ -1,6 +1,6 @@
 ---
 title: A Wizard's Coven (Remix)
-summary: Enoch Root's winning remix for The Polish Ambassador's first remix contest
+summary: Enoch Root's winning entry in The Polish Ambassador's first Beat Garden remix contest.
 releaseType: Single
 featured: true
 artistSlugs:
@@ -20,4 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Enoch was a member of The Polish Amabassador's short-lived Beat Garden community, and won the the first remix contest with this track.
+Enoch Root joined The Polish Ambassador's short-lived Beat Garden community and won its first remix contest with this track.

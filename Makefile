@@ -1,6 +1,6 @@
 SHELL := /bin/sh
 
-PROJECT_NAME := new-malevolentgods-com
+PROJECT_NAME := malevolentgods-com
 IMAGE_NAME := $(PROJECT_NAME)
 CONTAINER_PORT := 80
 HOST_PORT ?= 8080

@@ -1,6 +1,6 @@
 ---
 title: Que Hacemos Sera
-summary: Standalone Ignus VanMule single presented through SoundCloud.
+summary: A standalone Ignus VanMule transmission whose title is best treated as a warning.
 releaseType: Single
 featured: true
 artistSlugs:
@@ -20,6 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Que Hacemos Sera sits alongside Get Juked as part of the current Ignus VanMule single set.
-
-Giving it a dedicated release page keeps the track easy to discover and browse within the artist's catalog.
+Que Hacemos Sera arrived alongside Get Juked as part of an Ignus VanMule pair. Further explanation would only interfere with the signal.

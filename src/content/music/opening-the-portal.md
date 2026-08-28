@@ -1,6 +1,6 @@
 ---
 title: Opening the Portal
-summary: Enoch Root's first single
+summary: Enoch Root's first original single, produced after a Beat Garden remix win.
 releaseType: Single
 featured: true
 artistSlugs:
@@ -20,4 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Opening the Portal was the first single produced by Enoch after winning the first Beatgarden Remix contest hosted by The Polish Ambassador. It was inspired by an episode of Love, Death, and Robots.
+Opening the Portal was Enoch Root's first original single after winning The Polish Ambassador's first Beat Garden remix contest. An episode of Love, Death & Robots provided the necessary ritual instructions.

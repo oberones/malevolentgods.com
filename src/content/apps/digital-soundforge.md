@@ -1,6 +1,6 @@
 ---
 title: Digital SoundForge
-summary: A web-based reimagining of the SoundForge art project, translating that earlier work into an interactive browser-native format.
+summary: SoundForge reassembled as a browser-native sound and visual experiment.
 featured: false
 sortOrder: 3
 status: live
@@ -12,6 +12,4 @@ tags:
   - interactive
 ---
 
-Digital SoundForge turns the SoundForge art project into a web-based experience that can live directly in the browser.
-
-Instead of treating the original work as a static artifact, the app reframes it as something more playable, explorable, and immediate on the web.
+Digital SoundForge takes the original installation's sound and infinity-portal ideas and compresses them into something a browser can survive. Open it, interact with it, and see which part of the signal answers back.

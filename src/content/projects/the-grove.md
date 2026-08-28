@@ -1,6 +1,6 @@
 ---
 title: The Grove
-summary: An interactive game component of DAN, also being developed by Ignus VanMule.
+summary: The game-growing branch of DAN, cultivated by Ignus VanMule.
 publishedAt: 2026-04-12
 featured: false
 status: prototype
@@ -18,8 +18,8 @@ links: []
 heroImage: ''
 ---
 
-The Grove is the game-facing branch of the broader DAN effort, extending that project into something interactive, explorable, and structurally distinct from a pure authoring tool.
+The Grove is the game-facing branch of DAN: interactive, explorable, and structurally unwilling to remain a writing tool.
 
-It is being developed by Ignus VanMule as a connected component rather than a separate disconnected experiment, which means its design is tied closely to the same larger questions about interface, authorship, and participation.
+Ignus VanMule is developing it as a connected component, so its design shares DAN's larger questions about interface, authorship, and participation.
 
-At this stage, The Grove is best understood as an in-development prototype whose role is to test how those ideas behave once they become playable.
+For now, it is a prototype built to discover what those ideas do after they become playable.

@@ -1,14 +1,14 @@
 {
   "title": "Malevolent Gods",
-  "description": "A collective of artists, musicians, writers, and makers building strange and beautiful things.",
-  "footerText": "© 2026 Malevolent Gods.",
+  "description": "Art, music, writing, games, and other signals from an Atlanta collective operating slightly outside consensus reality.",
+  "footerText": "© 2026 Malevolent Gods. All rights to your mother reserved.",
   "homepageHero": {
     "eyebrow": "Malevolent Gods",
-    "title": "Art, music, writing, and software from a collective that doesn't always align with reality",
-    "summary": "A home for the collective’s music, art, writing, and experimental software, with room for releases, galleries, notes, and other strange things to live together.",
-    "primaryCtaLabel": "Explore music",
+    "title": "Art, music, writing, and software from slightly outside consensus reality.",
+    "summary": "Malevolent Gods makes records, images, games, tools, and whatever refuses to fit the category.",
+    "primaryCtaLabel": "Hear the music",
     "primaryCtaHref": "/music",
-    "secondaryCtaLabel": "View art",
+    "secondaryCtaLabel": "See the art",
     "secondaryCtaHref": "/art"
   },
   "socialLinks": []

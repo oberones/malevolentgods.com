@@ -1,6 +1,6 @@
 ---
 name: Dr. Doeslittle
-shortBio: Multi-platform music profile linking Bandcamp releases with Spotify and SoundCloud.
+shortBio: Genre is a pitiful human concept. Dr. Doeslittle has neurons to rearrange.
 featured: true
 portrait: ''
 heroImage: ''

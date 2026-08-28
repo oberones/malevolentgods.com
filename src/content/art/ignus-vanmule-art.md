@@ -1,6 +1,6 @@
 ---
 title: Ignus VanMule Art
-summary: A selection of digital, illustrated, and AI-assisted visual work by Ignus VanMule.
+summary: Four visual transmissions assembled with Photoshop, Illustrator, and machine assistance.
 medium: Digital / illustration / AI-assisted
 featured: true
 coverImage: /art/ignus/img/photo-2.jpg
@@ -15,4 +15,4 @@ gallery:
     caption: MidJourney
 ---
 
-Ignus VanMule Art gathers a compact set of bold visual pieces spanning Photoshop, Illustrator, and AI-assisted image work.
+Ignus VanMule assembled these four pieces with Photoshop, Illustrator, Midjourney, and whatever passed through the dimensional breach at the time.

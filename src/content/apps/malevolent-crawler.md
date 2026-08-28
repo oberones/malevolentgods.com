@@ -1,6 +1,6 @@
 ---
 title: Malevolent Crawler
-summary: A hosted deployment of Dungeon Crawler On-Demand, running the vanilla open-source implementation today while laying groundwork for a future Malevolent Gods fork.
+summary: Dungeon Crawler On-Demand, hosted here while a stranger future version waits below ground.
 featured: false
 sortOrder: 2
 status: live
@@ -12,6 +12,4 @@ tags:
   - hosted
 ---
 
-Malevolent Crawler is the site's hosted version of the open-source Dungeon Crawler On-Demand project.
-
-It currently runs the upstream experience without major changes, but the long-term intention is to fork the project and shape it into something more distinctly our own.
+Malevolent Crawler currently runs the upstream Dungeon Crawler On-Demand experience without major changes. The long-term plan is to fork it, alter the local ecosystem, and see what starts moving in the dark.

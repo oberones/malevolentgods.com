@@ -1,6 +1,6 @@
 ---
 title: Get Juked
-summary: Standalone Ignus VanMule single presented through SoundCloud.
+summary: "An Ignus VanMule transmission with one instruction: get juked."
 releaseType: Single
 featured: true
 artistSlugs:
@@ -20,4 +20,4 @@ embed:
   aspectRatio: 1 / 1
 ---
 
-Get Juked is one of the direct-release singles currently associated with Ignus VanMule.
+Get Juked is a standalone Ignus VanMule single. The title contains all required operating instructions.

@@ -1,6 +1,6 @@
 ---
 name: Enoch Root
-shortBio: Taking you on a journey though, space, time, and dimension
+shortBio: Dance music for journeys through space, time, and dimensions of questionable legality.
 featured: true
 portrait: ''
 heroImage: ''
