@@ -2,7 +2,7 @@
 title: Ignus VanMule's The Illusion of Self
 summary: Enoch Root folds Ignus VanMule's The Illusion of Self into a cross-dimensional DJ mix.
 releaseType: DJ Mix
-featured: true
+featured: false
 artistSlugs:
   - enoch-root
   - ignus-vanmule

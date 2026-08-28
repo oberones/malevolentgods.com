@@ -152,6 +152,7 @@ Create a reusable embed component that supports:
 - Bandcamp
 - Spotify
 - SoundCloud
+- MixCloud
 - fallback generic iframe
 
 Key requirements:

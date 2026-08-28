@@ -14,9 +14,9 @@ links:
     href: https://www.mixcloud.com/jaysen-nielsen/tech-house-set-the-lemonade-stand-love-burn-2026/
 coverImage: ''
 embed:
-  provider: Other
+  provider: MixCloud
   title: Lemonade Stand Tech House Set
-  url: https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fjaysen-nielsen%2Ftech-house-set-the-lemonade-stand-love-burn-2026%2F
+  url: https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=%2Fjaysen-nielsen%2Ftech-house-set-the-lemonade-stand-love-burn-2026%2F
   aspectRatio: 1 / 1
 ---
 

@@ -89,7 +89,7 @@ const music = defineCollection({
     ).default([]),
     coverImage: z.string().default(''),
     embed: z.object({
-      provider: z.enum(['Bandcamp', 'Spotify', 'SoundCloud', 'YouTube', 'Other']).optional(),
+      provider: z.enum(['Bandcamp', 'Spotify', 'SoundCloud', 'MixCloud', 'YouTube', 'Other']).optional(),
       title: z.string().optional(),
       url: z.string(),
       aspectRatio: z.string().optional()
