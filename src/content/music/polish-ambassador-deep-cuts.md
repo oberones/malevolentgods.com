@@ -2,7 +2,7 @@
 title: Polish Ambassador Deep Cuts
 summary: Enoch Root's first live DJ set, built from The Polish Ambassador deep cuts.
 releaseType: DJ Mix
-featured: true
+featured: false
 artistSlugs:
   - enoch-root
 artistNames:

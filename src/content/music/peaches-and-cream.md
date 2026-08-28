@@ -2,7 +2,7 @@
 title: Peaches and Cream
 summary: "Kerberos's first album: live playing, studio production, and several incompatible influences."
 releaseType: Album
-featured: true
+featured: false
 artistSlugs:
   - kerberos
 artistNames:

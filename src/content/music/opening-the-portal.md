@@ -2,7 +2,7 @@
 title: Opening the Portal
 summary: Enoch Root's first original single, produced after a Beat Garden remix win.
 releaseType: Single
-featured: true
+featured: false
 artistSlugs:
   - enoch-root
 artistNames:

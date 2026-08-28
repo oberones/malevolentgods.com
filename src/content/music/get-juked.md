@@ -2,7 +2,7 @@
 title: Get Juked
 summary: "An Ignus VanMule transmission with one instruction: get juked."
 releaseType: Single
-featured: true
+featured: false
 artistSlugs:
   - ignus-vanmule
 artistNames:

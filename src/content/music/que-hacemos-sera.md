@@ -2,7 +2,7 @@
 title: Que Hacemos Sera
 summary: A standalone Ignus VanMule transmission whose title is best treated as a warning.
 releaseType: Single
-featured: true
+featured: false
 artistSlugs:
   - ignus-vanmule
 artistNames:
