@@ -1,3 +1,9 @@
+## 0.2.1 (2026-10-24)
+
+### Fix
+
+- update build job to publish only on tagged push
+
 ## 0.2.0 (2026-10-24)
 
 ### Feat
