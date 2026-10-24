@@ -7,8 +7,6 @@ services:
     user: "nginx:nginx"
     cap_drop:
       - ALL
-    security_opt:
-      - no-new-privileges:true
     sysctls:
       # Allow non-root Nginx to retain the existing container port without capabilities.
       net.ipv4.ip_unprivileged_port_start: "0"
