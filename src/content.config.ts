@@ -1,7 +1,9 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const art = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/art' }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
@@ -18,7 +20,7 @@ const art = defineCollection({
 });
 
 const site = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/[^_]*.json', base: './src/content/site' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -42,7 +44,7 @@ const site = defineCollection({
 });
 
 const navigation = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/[^_]*.json', base: './src/content/navigation' }),
   schema: z.object({
     title: z.string().optional(),
     items: z.array(
@@ -55,7 +57,7 @@ const navigation = defineCollection({
 });
 
 const artists = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/artists' }),
   schema: z.object({
     name: z.string(),
     shortBio: z.string(),
@@ -72,7 +74,7 @@ const artists = defineCollection({
 });
 
 const music = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/music' }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
@@ -98,7 +100,7 @@ const music = defineCollection({
 });
 
 const writing = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/writing' }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
@@ -115,7 +117,7 @@ const writing = defineCollection({
 });
 
 const apps = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/apps' }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
@@ -129,7 +131,7 @@ const apps = defineCollection({
 });
 
 const projects = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),

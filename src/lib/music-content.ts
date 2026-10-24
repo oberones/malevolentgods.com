@@ -23,10 +23,10 @@ export async function getMusicReleases() {
   return sortFeaturedThenName(
     entries.map((entry) => ({
       ...entry.data,
-      slug: entry.slug,
-      body: markdownBodyToNodes(entry.body),
+      slug: entry.id,
+      body: markdownBodyToNodes(entry.body ?? ''),
       credits: (entry.data.credits || []).map((item) => ({ type: 'paragraph' as const, text: item })),
-      href: `/music/${entry.slug}`
+      href: `/music/${entry.id}`
     }))
   );
 }
@@ -48,9 +48,9 @@ export async function getArtists() {
   return sortFeaturedThenName(
     entries.map((entry) => ({
       ...entry.data,
-      slug: entry.slug,
-      bio: markdownBodyToNodes(entry.body),
-      href: `/artists/${entry.slug}`
+      slug: entry.id,
+      bio: markdownBodyToNodes(entry.body ?? ''),
+      href: `/artists/${entry.id}`
     }))
   );
 }

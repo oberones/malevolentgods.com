@@ -6,8 +6,8 @@ export async function getProjects() {
   return entries
     .map((entry) => ({
       ...entry.data,
-      slug: entry.slug,
-      href: `/projects/${entry.slug}`
+      slug: entry.id,
+      href: `/projects/${entry.id}`
     }))
     .sort((a, b) => {
       const featuredDelta = Number(b.featured ?? false) - Number(a.featured ?? false);

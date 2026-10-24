@@ -43,3 +43,22 @@ does not delete them from GitHub.
 Publishing an image does not update the running website. Use the commit tag
 when selecting a specific image for a separately managed deployment or rollback.
 The production Compose file remains at `deploy/compose.production.yml`.
+
+## Container runtime user
+
+The production image and Compose service both select `nginx:nginx` (UID/GID
+101 in the pinned runtime image). The Nginx master and worker processes run as
+this unprivileged account. The image places the PID file in `/tmp/nginx.pid`
+and gives this account ownership of `/var/cache/nginx`; site files and
+configuration remain owned by root.
+
+Compose drops all Linux capabilities and enables `no-new-privileges`. The
+container-local `net.ipv4.ip_unprivileged_port_start=0` setting allows Nginx to
+keep listening on port 80 without a bind capability, preserving the existing
+reverse proxy and health check configuration. The production example uses the
+same settings.
+
+Deploy this Compose change together with an image rebuilt from the updated
+Dockerfile. Older images lack the writable PID/cache setup and will not start
+with the enforced non-root user. Publishing alone does not apply either change
+to the running server.

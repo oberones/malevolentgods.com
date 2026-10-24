@@ -7,8 +7,8 @@ export async function getWritingEntries() {
     .filter((entry) => entry.data.status === 'published')
     .map((entry) => ({
       ...entry.data,
-      slug: entry.slug,
-      href: `/writing/${entry.slug}`
+      slug: entry.id,
+      href: `/writing/${entry.id}`
     }))
     .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
 }

@@ -1,6 +1,6 @@
 services:
   website:
-    image: node:20-alpine
+    image: node:24.22.1-alpine
     container_name: mg-website 
     working_dir: /app
     command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 4321"
