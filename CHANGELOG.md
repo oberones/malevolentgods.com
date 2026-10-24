@@ -1,3 +1,15 @@
+## 0.2.0 (2026-10-24)
+
+### Feat
+
+- **apps**: add Wasteland Flight Simulator
+- add support for new mixcloud music provider
+- add enoch dj set from lb 2026
+
+### Fix
+
+- update dependencies with latest versions
+
 ## 0.1.1 (2026-08-28)
 
 ### Fix
