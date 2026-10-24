@@ -229,9 +229,10 @@ Keep caching policy explicit per route family instead of trying to treat the who
 
 # Deployment workflow
 
-Production deployments are automated by GitHub Actions. See
-[`AUTOMATED-DEPLOYMENT.md`](./AUTOMATED-DEPLOYMENT.md) for the one-time Ubuntu and
-GitHub setup, workflow behavior, deployment verification, and rollback procedure.
+Production images are verified and published to GHCR by GitHub Actions.
+Deployment to Hera is managed separately. See
+[`AUTOMATED-DEPLOYMENT.md`](./AUTOMATED-DEPLOYMENT.md) for
+GitHub permissions, workflow behavior, and image tags.
 
 ## Recommended content/site deploy flow
 

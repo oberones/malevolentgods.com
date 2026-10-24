@@ -106,36 +106,23 @@ from another terminal with:
 make docker-stop
 ```
 
-## Production deployment
+## Production image publishing
 
-Production deployment is automated by
+GitHub Actions verifies and publishes the production image through
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 
 1. Pull requests to `main` run `npm ci`, build the site, validate the production
    Compose file, and build the Docker image without publishing it.
-2. A push to `main` publishes both an immutable `sha-<commit>` image and the
-   moving `latest` tag to `ghcr.io/oberones/malevolentgods.com`.
-3. The workflow copies the validated Compose file to the production server,
-   deploys the immutable commit image, waits for the container health check, and
-   requests `https://malevolentgods.com/` before reporting success.
+2. A push to `main` runs the same verification, then publishes both a
+   `sha-<commit>` image tag and the moving `latest` tag to
+   `ghcr.io/oberones/malevolentgods.com`.
 
-The production `mg-website` container does not publish a host port. It joins the
-external `ai-backend` Docker network, where the public edge proxy reaches it at
-`mg-website:80` and owns TLS and any separately hosted app or service routes.
+The **Verify and publish** workflow ends after publishing to GHCR. Deployment to
+Hera is managed separately; the workflow does not connect to or update the server.
 
-The normal release action is therefore:
-
-1. Open a focused pull request to `main` and wait for the **Verify** job.
-2. Merge the pull request.
-3. Watch the **Verify, publish, and deploy** workflow complete.
-4. Confirm the workflow deployed the expected commit tag and check the affected
-   public routes.
-
-Server preparation, GitHub environment secrets, the first automated cutover,
-rollback commands, and troubleshooting are documented in the
-[automated deployment guide](docs/AUTOMATED-DEPLOYMENT.md). The broader
-[infrastructure notes](docs/DEPLOYMENT.md) explain how the static site coexists
-with reverse-proxied apps and services.
+See the [image publishing guide](docs/AUTOMATED-DEPLOYMENT.md) for workflow and
+permission details. The broader [infrastructure notes](docs/DEPLOYMENT.md)
+describe hosting and reverse-proxied apps and services.
 
 ## Useful commands
 
