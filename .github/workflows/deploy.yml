@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - main
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 permissions:
   contents: read
@@ -44,7 +47,7 @@ jobs:
 
   publish:
     name: Publish image
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref_type == 'tag'
     needs: verify
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -72,10 +75,12 @@ jobs:
           context: .
           push: true
           tags: |
+            ${{ env.IMAGE }}:${{ github.ref_name }}
             ${{ env.IMAGE }}:sha-${{ github.sha }}
             ${{ env.IMAGE }}:latest
           labels: |
             org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
             org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.version=${{ github.ref_name }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

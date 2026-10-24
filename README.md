@@ -116,11 +116,13 @@ make docker-stop
 GitHub Actions verifies and publishes the production image through
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 
-1. Pull requests to `main` run `npm ci`, build the site, validate the production
-   Compose file, and build the Docker image without publishing it.
-2. A push to `main` runs the same verification, then publishes both a
-   `sha-<commit>` image tag and the moving `latest` tag to
-   `ghcr.io/oberones/malevolentgods.com`.
+1. Pull requests to `main` and pushes to `main` run `npm ci`, build the site,
+   validate the production Compose file, and build the Docker image without
+   publishing it.
+2. Pushing a version tag in `X.Y.Z` or `vX.Y.Z` format (for example, `0.3.0` or
+   `v0.3.0`) runs the same verification, then publishes the exact version tag,
+   a `sha-<commit>` image tag, and the moving `latest` tag to
+   `ghcr.io/oberones/malevolentgods.com`. Other tags do not trigger publishing.
 
 The **Verify and publish** workflow ends after publishing to GHCR. Deployment to
 Hera is managed separately; the workflow does not connect to or update the server.

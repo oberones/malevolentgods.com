@@ -9,17 +9,23 @@ removed. Server updates are managed separately.
 The **Verify and publish** workflow is defined in
 [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml).
 
-Pull requests targeting `main` run verification only:
+Pull requests targeting `main` and pushes to `main` run verification only:
 
 1. Install locked npm dependencies with `npm ci`.
 2. Build the Astro site.
 3. Validate the production Compose file.
 4. Build the production Docker image without publishing it.
 
-Pushes to `main` run the same verification, then publish these image tags:
+Pushing a version tag in `X.Y.Z` or `vX.Y.Z` format (numeric major, minor, and
+patch components) runs the same verification, then publishes these image tags:
 
+- `ghcr.io/oberones/malevolentgods.com:<version-tag>` (for example, `0.3.0` or `v0.3.0`)
 - `ghcr.io/oberones/malevolentgods.com:sha-<commit>`
 - `ghcr.io/oberones/malevolentgods.com:latest`
+
+The version image tag preserves the Git tag exactly, including an optional `v`
+prefix. Other tags, including prerelease tags such as `0.3.0-rc.1`, do not
+trigger publishing. Publishing requires verification to pass first.
 
 The workflow ends after publishing. It does not copy Compose files, run SSH
 commands, restart containers, or check the public site.
@@ -36,12 +42,21 @@ does not delete them from GitHub.
 
 1. Open a pull request to `main`.
 2. Wait for the **Verify** check to pass.
-3. Merge the pull request.
-4. Wait for **Verify and publish** to complete.
-5. Confirm the expected `sha-<commit>` tag is available in GHCR.
+3. Merge the pull request and wait for verification on `main` to pass.
+4. Tag the release commit and push that tag. For example, from an up-to-date
+   `main` checkout, using an unused version:
 
-Publishing an image does not update the running website. Use the commit tag
-when selecting a specific image for a separately managed deployment or rollback.
+   ```bash
+   git tag -a 0.3.0 -m "Release 0.3.0"
+   git push origin 0.3.0
+   ```
+
+5. Wait for **Verify and publish** to complete for the tag push.
+6. Confirm the expected version and `sha-<commit>` tags are available in GHCR.
+
+Publishing an image does not update the running website. Use the version or
+commit image tag when selecting a specific image for a separately managed
+deployment or rollback.
 The production Compose file remains at `deploy/compose.production.yml`.
 
 ## Container runtime user
