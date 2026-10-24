@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import type { RichTextNode } from './rich-text';
 
 export interface ArtGalleryItem {
@@ -26,16 +26,16 @@ function markdownBodyToNodes(body: string): RichTextNode[] {
     .map((chunk) => ({ type: 'paragraph' as const, text: chunk.replace(/\n+/g, ' ') }));
 }
 
-function mapArtEntry(entry: Awaited<ReturnType<typeof getCollection>>[number]): ArtProject {
+function mapArtEntry(entry: CollectionEntry<'art'>): ArtProject {
   return {
     title: entry.data.title,
-    slug: entry.slug,
+    slug: entry.id,
     summary: entry.data.summary,
-    body: markdownBodyToNodes(entry.body),
+    body: markdownBodyToNodes(entry.body ?? ''),
     medium: entry.data.medium,
     featured: entry.data.featured,
     coverImage: entry.data.coverImage,
-    href: `/art/${entry.slug}`,
+    href: `/art/${entry.id}`,
     gallery: entry.data.gallery || []
   };
 }

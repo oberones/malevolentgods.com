@@ -1,4 +1,4 @@
-FROM node:20-alpine AS build
+FROM node:24.22.1-alpine AS build
 WORKDIR /app
 
 COPY package.json package-lock.json ./
@@ -7,9 +7,11 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM nginx:1.31.4 AS runtime
+FROM nginx:1.31.8 AS runtime
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist /usr/share/nginx/html
+# Public assets can retain restrictive permissions from the build host.
+RUN chmod -R a+rX /usr/share/nginx/html
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

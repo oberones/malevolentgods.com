@@ -15,8 +15,8 @@ export async function getApps() {
   return entries
     .map((entry) => ({
       ...entry.data,
-      slug: entry.slug,
-      body: markdownBodyToNodes(entry.body),
+      slug: entry.id,
+      body: markdownBodyToNodes(entry.body ?? ''),
       href: entry.data.launchPath
     }))
     .sort((a, b) => {

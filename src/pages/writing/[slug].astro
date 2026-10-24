@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   return entries
     .filter((entry) => entry.data.status === 'published')
     .map((entry) => ({
-      params: { slug: entry.slug }
+      params: { slug: entry.id }
     }));
 }
 
@@ -16,7 +16,7 @@ const { slug } = Astro.params;
 const entries = await getCollection('writing');
 const entry = entries
   .filter((item) => item.data.status === 'published')
-  .find((item) => item.slug === slug);
+  .find((item) => item.id === slug);
 
 if (!entry) {
   return Astro.redirect('/writing');

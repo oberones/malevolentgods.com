@@ -4,15 +4,17 @@
 Malevolent Gods collective: art, music, writing, software, and other work made
 under questionable celestial supervision.
 
-The site is built with Astro 5 and Tailwind CSS 4. Content is stored in local
+The site is built with Astro 7 and Tailwind CSS 4. Content is stored in local
 Markdown and JSON collections, assets live in the repository, and production is
 served by Nginx from a small multi-stage Docker image. There is no runtime CMS,
 database, or Node.js application server.
 
 ## Quickstart
 
-You need Node.js 20 and npm. Docker and Docker Compose are optional unless you
-are testing the production image or deployment configuration.
+Use Node.js 24.22.1 LTS (pinned in `.nvmrc`, CI, and Docker) and npm. If you use
+nvm, run `nvm install` and `nvm use` in this directory. The minimum supported
+versions are Node.js 22.23.4 and npm 9.6.5. Docker and Docker Compose are optional
+unless you are testing the production image or deployment configuration.
 
 Install the locked dependencies and start Astro's development server:
 
@@ -34,6 +36,9 @@ npm run preview
 
 The build is written to `dist/`. `npm run build` also validates the content
 collections and is the minimum required check for every change.
+
+See the [dependency review](docs/DEPENDENCY-REVIEW.md) for the current version
+inventory, Astro migration details, and upgrade verification results.
 
 ## Content and project layout
 
