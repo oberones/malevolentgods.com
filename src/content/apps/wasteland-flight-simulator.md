@@ -1,7 +1,7 @@
 ---
 title: Wasteland Flight Simulator
 summary: A deterministic 3D glider simulator over a procedurally generated wasteland where lift, drag, stalls, and gravity have opinions.
-featured: false
+featured: true
 sortOrder: 4
 status: live
 appType: Game

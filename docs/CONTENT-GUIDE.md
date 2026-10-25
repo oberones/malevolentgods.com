@@ -439,7 +439,7 @@ Ritual Indexer is conceived as a local-first retrieval layer...
 
 **Folder:** `src/content/apps/`
 
-Each file in this folder is one hosted app entry for the `/apps` landing page.
+Each file in this folder is one hosted app entry for the `/apps` landing page. The homepage also shows up to three entries marked `featured: true`, ordered by `sortOrder` (lowest first), then title.
 
 Unlike Projects, these entries do not currently have Astro detail pages. They exist to describe and launch apps that already live at mounted subpaths such as `/apps/local-dope-wars/`.
 
@@ -484,6 +484,7 @@ Local Dope Wars reimagines the classic game with a more local sense of place.
 - The `/apps` page is site-owned, but the mounted app subpaths are their own runtime surfaces
 - Use the body to explain what the app does now and what future changes are planned
 - Keep summaries short enough to work on cards
+- `featured: true` also places the app first on `/apps` and gives its card the full grid width there
 
 ### Best practices
 - Describe the live app honestly

@@ -6,13 +6,14 @@ import Container from '@/components/Container.astro';
 import Section from '@/components/Section.astro';
 import MusicCard from '@/components/MusicCard.astro';
 import ArtistCard from '@/components/ArtistCard.astro';
+import AppCard from '@/components/AppCard.astro';
 import HomeFeatureList from '@/components/HomeFeatureList.astro';
 import { getGlobalSiteData } from '@/lib/content';
 import { getHomepageContent } from '@/lib/home-content';
 
 const { settings, fallbackSite } = await getGlobalSiteData();
 const hero = settings?.homepageHero || fallbackSite.homepageHero;
-const { featuredArtists, featuredMusic, spotlightRelease } = await getHomepageContent();
+const { featuredArtists, featuredMusic, featuredApps, spotlightRelease } = await getHomepageContent();
 
 const homeFeatures = [
   {
@@ -112,6 +113,28 @@ const homeFeatures = [
       ))}
     </div>
   </Section>
+
+  {featuredApps.length > 0 && (
+    <Section
+      title="Featured apps"
+      intro="Small worlds, local hustles, and questionable flying machines."
+      class="pt-0"
+    >
+      <div class="grid gap-6 lg:grid-cols-3">
+        {featuredApps.map((app) => (
+          <AppCard
+            title={app.title}
+            summary={app.summary}
+            appType={app.appType}
+            href={app.href}
+          />
+        ))}
+      </div>
+      <div class="mt-8">
+        <Button href="/apps" variant="secondary">Explore all apps →</Button>
+      </div>
+    </Section>
+  )}
 
   <Section
     title="Other disturbances"
