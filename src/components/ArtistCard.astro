@@ -1,5 +1,6 @@
 ---
 import Card from '@/components/Card.astro';
+import Button from '@/components/Button.astro';
 import LinkPills from '@/components/LinkPills.astro';
 
 export interface LinkItem {
@@ -27,9 +28,9 @@ const { name, shortBio, href, links = [] } = Astro.props;
   <div class="space-y-4">
     <LinkPills links={links.slice(0, 3)} />
     {href && (
-      <a href={href} class="inline-flex text-sm font-medium text-accentAlt transition hover:text-text">
+      <Button href={href} aria-label={`View artist: ${name}`}>
         View artist →
-      </a>
+      </Button>
     )}
   </div>
 </Card>
