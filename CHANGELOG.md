@@ -1,3 +1,14 @@
+## 0.3.0 (2026-10-25)
+
+### Feat
+
+- add new app page for pocket worlds
+
+### Fix
+
+- update soundforge description
+- update local dope wars app description
+
 ## 0.2.1 (2026-10-24)
 
 ### Fix
