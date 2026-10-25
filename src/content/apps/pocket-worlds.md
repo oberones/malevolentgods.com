@@ -1,8 +1,8 @@
 ---
 title: Pocket Worlds
 summary: Interactive 3D worlds in miniature, with controls to stir up the weather and set tiny scenes in motion.
-featured: false
-sortOrder: 5
+featured: true
+sortOrder: 0
 status: live
 appType: Interactive 3D
 launchPath: /apps/pocket-worlds/

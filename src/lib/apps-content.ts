@@ -29,3 +29,9 @@ export async function getApps() {
       return a.title.localeCompare(b.title);
     });
 }
+
+export async function getFeaturedApps(limit?: number) {
+  const apps = await getApps();
+  const featured = apps.filter((app) => app.featured);
+  return typeof limit === 'number' ? featured.slice(0, limit) : featured;
+}
