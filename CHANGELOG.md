@@ -1,3 +1,13 @@
+## 0.4.0 (2026-10-25)
+
+### Feat
+
+- add featured apps to home page
+
+### Fix
+
+- update malevolent crawler description
+
 ## 0.3.0 (2026-10-25)
 
 ### Feat
