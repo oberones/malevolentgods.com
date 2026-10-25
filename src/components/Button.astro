@@ -3,11 +3,12 @@ export interface Props {
   href?: string;
   variant?: 'primary' | 'secondary';
   class?: string;
+  'aria-label'?: string;
 }
 
-const { href, variant = 'primary', class: className = '' } = Astro.props;
+const { href, variant = 'primary', class: className = '', 'aria-label': ariaLabel } = Astro.props;
 
-const base = 'inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition duration-200';
+const base = 'inline-flex min-h-11 items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accentAlt';
 const styles = {
   primary: 'bg-accent text-white shadow-glow hover:bg-violet-500',
   secondary: 'border border-line bg-surface text-text hover:border-accent hover:text-white'
@@ -15,11 +16,11 @@ const styles = {
 ---
 
 {href ? (
-  <a href={href} class={`${base} ${styles[variant]} ${className}`}>
+  <a href={href} aria-label={ariaLabel} class={`${base} ${styles[variant]} ${className}`}>
     <slot />
   </a>
 ) : (
-  <button class={`${base} ${styles[variant]} ${className}`}>
+  <button aria-label={ariaLabel} class={`${base} ${styles[variant]} ${className}`}>
     <slot />
   </button>
 )}

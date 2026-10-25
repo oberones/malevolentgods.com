@@ -1,5 +1,6 @@
 ---
 import Card from '@/components/Card.astro';
+import Button from '@/components/Button.astro';
 
 export interface Props {
   title: string;
@@ -18,11 +19,11 @@ const { title, summary, appType, href } = Astro.props;
     <p class="mt-4 text-sm leading-6 text-textMuted">{summary}</p>
   </div>
 
-  <a
+  <Button
     href={href}
     aria-label={`Open ${title}`}
-    class="inline-flex self-start text-sm font-medium text-accentAlt transition hover:text-text"
+    class="self-start"
   >
     Open app →
-  </a>
+  </Button>
 </Card>
