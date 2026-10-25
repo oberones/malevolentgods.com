@@ -1,3 +1,9 @@
+## 0.5.2 (2026-10-25)
+
+### Fix
+
+- add ignus midnight machine album
+
 ## 0.5.1 (2026-10-25)
 
 ### Fix
