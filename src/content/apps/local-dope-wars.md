@@ -1,6 +1,6 @@
 ---
 title: Local Dope Wars
-summary: A browser-native revival of Dope Wars that adds richer systems, real Georgia locations, and customizable content packs to the classic buy-low-sell-high loop.
+summary: Buy low, sell high, and stay out of trouble in a Georgia-flavored take on the classic Dope Wars trading game.
 featured: true
 sortOrder: 1
 status: live
@@ -13,8 +13,8 @@ tags:
   - georgia
 ---
 
-Local Dope Wars is an open-source React and TypeScript remake of the classic trading game. Buy low, travel, dodge trouble, and cash out before the clock does something rude. A dedicated SVG map, browser-local autosave, and run scoring keep the machinery moving.
+Start with a little cash, a looming debt, and limited room in your stash. Trade drugs between local markets, chase price swings, and decide when a risky trip is worth the payoff. Every journey advances the clock, so make your money and settle your debts before the run ends.
 
-Players can choose between bundled Gwinnett County and Atlanta Intown packs or import custom local content from JSON. Market shocks, collector pressure, cop stops, rival crews, debt, banking, pawn advances, gear, and local high scores provide the consequences.
+Local Dope Wars brings the hustle to Gwinnett County and Atlanta Intown, with real locations, shifting markets, and mounting pressure from cops, collectors, and rival crews. Bank your profits, buy defensive gear, or pawn equipment when money gets tight. When trouble catches up, choose whether to fight, flee, or surrender.
 
-The old economic loop remains intact. The geography, scenarios, and bad decisions can now be replaced without rebuilding the entire game.
+Play straight in your browser, pick up an automatically saved run, and try to beat your local high score. Want a different stomping ground? Import a custom location pack and take the hustle somewhere new.
