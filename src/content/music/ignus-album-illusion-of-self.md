@@ -2,7 +2,7 @@
 title: Illusion of Self
 summary: An exploration of sound and consciousness
 releaseType: Album
-featured: true
+featured: false
 artistSlugs:
   - ignus-vanmule
 artistNames:
