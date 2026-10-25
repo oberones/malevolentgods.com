@@ -1,3 +1,9 @@
+## 0.5.0 (2026-10-25)
+
+### Feat
+
+- add pill buttons to cards
+
 ## 0.4.0 (2026-10-25)
 
 ### Feat
