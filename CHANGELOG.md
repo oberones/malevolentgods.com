@@ -1,3 +1,9 @@
+## 0.6.1 (2026-10-25)
+
+### Fix
+
+- update homepage links and copy
+
 ## 0.6.0 (2026-10-25)
 
 ### Feat
