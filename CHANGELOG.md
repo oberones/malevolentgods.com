@@ -1,3 +1,13 @@
+## 0.6.0 (2026-10-25)
+
+### Feat
+
+- add hyperprism app with links and feature
+
+### Fix
+
+- fix the shared music card overflow and embedding size
+
 ## 0.5.2 (2026-10-25)
 
 ### Fix
