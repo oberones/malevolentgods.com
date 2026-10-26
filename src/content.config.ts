@@ -32,7 +32,9 @@ const site = defineCollection({
       primaryCtaLabel: z.string().optional(),
       primaryCtaHref: z.string().optional(),
       secondaryCtaLabel: z.string().optional(),
-      secondaryCtaHref: z.string().optional()
+      secondaryCtaHref: z.string().optional(),
+      tertiaryCtaLabel: z.string().optional(),
+      tertiaryCtaHref: z.string().optional()
     }),
     socialLinks: z.array(
       z.object({

@@ -14,13 +14,15 @@ export const site = {
   ],
   homepageHero: {
     eyebrow: 'Malevolent Gods',
-    title: 'Art, music, writing, and software from slightly outside consensus reality.',
+    title: "An art collective that doesn't always align with reality",
     summary:
       'Malevolent Gods makes records, images, games, tools, and whatever refuses to fit the category.',
     primaryCtaLabel: 'Hear the music',
     primaryCtaHref: '/music',
     secondaryCtaLabel: 'See the art',
-    secondaryCtaHref: '/art'
+    secondaryCtaHref: '/art',
+    tertiaryCtaLabel: 'Play with the toys',
+    tertiaryCtaHref: '/apps'
   },
   social: []
 };
