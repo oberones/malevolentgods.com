@@ -28,8 +28,8 @@ const minHeightClass = isBandcamp
       : 'min-h-[360px]';
 ---
 
-<div class={`overflow-hidden rounded-3xl border border-line bg-surface shadow-glow ${className}`}>
-  <div class={`relative w-full ${minHeightClass}`} style={`aspect-ratio: ${aspectRatio};`}>
+<div class={`w-full min-w-0 max-w-full overflow-hidden rounded-3xl border border-line bg-surface shadow-glow ${className}`}>
+  <div class={`relative w-full min-w-0 max-w-full ${minHeightClass}`} style={`aspect-ratio: ${aspectRatio};`}>
     <iframe
       src={url}
       title={title}

@@ -20,7 +20,7 @@ export interface Props {
 const { title, summary, href, embed } = Astro.props;
 ---
 
-<Card class="flex h-full flex-col gap-4">
+<Card class="flex h-full min-w-0 flex-col gap-4">
   {embed && (
     <EmbedFrame
       provider={embed.provider}
