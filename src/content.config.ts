@@ -82,6 +82,7 @@ const music = defineCollection({
     summary: z.string(),
     releaseType: z.string().optional(),
     featured: z.boolean().default(true),
+    sortOrder: z.number().default(100),
     artistSlugs: z.array(z.string()).default([]),
     artistNames: z.array(z.string()).default([]),
     credits: z.array(z.string()).default([]),

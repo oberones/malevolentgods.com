@@ -31,9 +31,12 @@ export async function getMusicReleases() {
   );
 }
 
+/** Order featured releases by editorial priority, then title, before applying the display limit. */
 export async function getFeaturedMusic(limit?: number) {
   const releases = await getMusicReleases();
-  const featured = releases.filter((item) => item.featured !== false);
+  const featured = releases
+    .filter((item) => item.featured !== false)
+    .sort((a, b) => a.sortOrder - b.sortOrder || a.title.localeCompare(b.title));
   return typeof limit === 'number' ? featured.slice(0, limit) : featured;
 }
 
