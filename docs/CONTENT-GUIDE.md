@@ -214,6 +214,7 @@ Each file in `src/content/music/` is one release, single, mix, or other listenin
 
 ### Optional fields
 - `releaseType`
+- `sortOrder` (defaults to `100`; lower values appear first in featured music)
 - `links`
 - `coverImage`
 - `embed`
@@ -245,6 +246,7 @@ First-pass migrated release page for the Malevolent Gods collective identity.
 ```
 
 ### Notes
+- Featured music is ordered by `sortOrder`, then title. The homepage shows up to three entries and `/music` shows up to eight; the first entry also supplies each page's release spotlight.
 - `artistSlugs` should match filenames in `src/content/artists/`
 - `artistNames` should match the human-readable artist names
 - `credits` is currently a simple list of strings

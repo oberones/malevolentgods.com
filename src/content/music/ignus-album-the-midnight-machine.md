@@ -3,6 +3,7 @@ title: The Midnight Machine
 summary: The Midnight Machine is an album by Ignus VanMule.
 releaseType: Album
 featured: true
+sortOrder: 0
 artistSlugs:
   - ignus-vanmule
 artistNames:
