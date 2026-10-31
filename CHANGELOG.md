@@ -1,3 +1,9 @@
+## 0.7.0 (2026-10-31)
+
+### Feat
+
+- add markvov playground to apps section
+
 ## 0.6.1 (2026-10-25)
 
 ### Fix
